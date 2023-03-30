@@ -8,16 +8,12 @@
              d:DesignWidth="1300"
              Height="400"
              Width="1275"
-             Background="{DynamicResource fifthColor}">
+             Background="DarkGray">
     <Grid>
         <Canvas>
             <Image Source="\Images\notfound.png" Height="145" Width="144" Canvas.Left="578" Canvas.Top="81" HorizontalAlignment="Center" VerticalAlignment="Top"></Image>
             <TextBlock FontWeight="Bold" Style="{StaticResource MyTextBlockStyle2}" FontSize="30" Width="288" Canvas.Left="512" Canvas.Top="230" RenderTransformOrigin="0.545,0.39">No results found</TextBlock>
-            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Foreground="{StaticResource fourthColor}" FontSize="25" Width="884" Canvas.Left="394" Canvas.Top="270" RenderTransformOrigin="0.545,0.39" HorizontalAlignment="Center" VerticalAlignment="Top">Your search returned no results. Try again.</TextBlock>
-            
-
-
-
+            <TextBlock Style="{StaticResource MyTextBlockStyle2}" Foreground="{StaticResource fourthColor}" FontSize="25" Width="884" Canvas.Left="214" Canvas.Top="270" RenderTransformOrigin="0.545,0.39" HorizontalAlignment="Center" VerticalAlignment="Top">Your search returned no results. Try shortening or rephrasing your search.</TextBlock>
         </Canvas>
     </Grid>
 </UserControl>

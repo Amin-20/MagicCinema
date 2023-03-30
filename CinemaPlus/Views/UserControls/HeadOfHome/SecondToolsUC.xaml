@@ -3,42 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.Home"
              mc:Ignorable="d" 
              d:DesignHeight="71"
              d:DesignWidth="1200"
              Height="80"
              Width="1200"
              VerticalAlignment="Center">
-    <!--<Grid>
+    <Grid>
         <StackPanel Orientation="Horizontal"
-                        Background="{DynamicResource fifthColor}">
-            <Button Style="{StaticResource MyButtonStyle2}" Margin="40,0,0,0" Command="{Binding HomeCommand}">Home</Button>
-            <Button Style="{StaticResource MyButtonStyle2}" Command="{Binding FaqCommand}" >FAQ</Button>
-            <Button Style="{StaticResource MyButtonStyle2}" Command="{Binding TariffsCommand}" >Tariffs</Button>
-            <Button Style="{StaticResource MyButtonStyle2}" Command="{Binding CineBonusCommand}" >CineBonus</Button>
+                        Background="White">
 
-            <Image Source="\Images\ringer.png"
-                       Margin="20,0,0,0"></Image>
-                    
-            <Button Style="{StaticResource MyButtonStyle2}" Margin="20,0,0,40" Command="{Binding HomeCommand}" Width="116">Home</Button>
-            --><!--<Button Style="{StaticResource MyButtonStyle2}" Margin="10,0,0,40" Command="{Binding AdminSideCommand}" Width="116">Admin</Button>--><!--
-            <Button Style="{StaticResource MyButtonStyle2}" Content="Admin Side" Command = "{Binding AdminSideCommand}">
-      </Button>
-            --><!--<Button Style="{StaticResource MyButtonStyle2}" Margin="10,0,0,40" Width="116">FAQ</Button>--><!--
-            <Button Style="{StaticResource MyButtonStyle2}" Margin="10,0,0,40" Width="116">Tariffs</Button>
-            <Button Style="{StaticResource MyButtonStyle2}" Margin="10,0,0,40" Width="116">CineBonus</Button>
-          <Image Source="\Images\ringer.png"  Margin="30,0,0,40"
-                       Width="20"
-                       Height="20"></Image>
-                <Label Content="+994 70 308 88 84" 
-                       Foreground="{DynamicResource firstColor}"
-                       Margin="10,0,0,0"
+            <Image Source="\Images\Phone.png"
+                       Margin="450,0,0,0"
+                       Width="30"
+                       Height="37"/>
+            <Label Content="+994 50 449 25 16" 
+                       Foreground="Black"
+                       Margin="0,0,70,0"
                        Height="35"
-                    FontSize="20"
+                       FontSize="20"
                        FontFamily="\Fonts\#Roboto Medium"
                        VerticalContentAlignment="Center"
                        Cursor="IBeam"/>
+            <Label  Style="{StaticResource MyLabelStyle}" Foreground="Black" Content="Admin Side" FontSize="20" Height="32" Width="132">
+                <Label.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command = "{Binding AdminSideCommand}"/>
+                </Label.InputBindings>
+            </Label>
         </StackPanel>
-    </Grid>-->
+    </Grid>
 </UserControl>
 

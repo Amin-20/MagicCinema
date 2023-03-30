@@ -9,13 +9,13 @@
         <Setter Property="FontSize" Value="20"></Setter>
         <Setter Property="FontWeight" Value="Medium"></Setter>
         <Setter Property="TextAlignment" Value="Left"></Setter>
-        <Setter Property="Foreground" Value="{StaticResource tenthColor}"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource seventhColor}"></Setter>
         <Setter Property="Background" Value="Transparent"></Setter>
         <Setter Property="Width" Value="265"></Setter>
     </Style>
 
     <Style x:Key="MyTextBlockStyle2" TargetType="TextBlock" BasedOn="{StaticResource MyTextBlockStyle}">
-        <Setter Property="Foreground" Value="{StaticResource firstColor}" />
+        <Setter Property="Foreground" Value="{StaticResource sixthColor}" />
         <Setter Property="Padding" Value="20" />
         <Setter Property="FontSize" Value="18" />
         <Setter Property="Width" Value="156.25" />

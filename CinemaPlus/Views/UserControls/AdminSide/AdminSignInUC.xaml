@@ -6,55 +6,78 @@
              xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.AdminSide" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
              mc:Ignorable="d" 
-             Height="563"
+             Height="763"
              Width="1500"
-             d:DesignHeight="563"
+             d:DesignHeight="763"
              d:DesignWidth="1500">
-    <Grid Background="{DynamicResource fifthColor}">
+    <Grid Background="{DynamicResource firstColor}">
         <Grid Margin="-31,0,41,0">
             <Canvas Margin="-10,10,0,-10" HorizontalAlignment="Left" Width="1500">
+                <StackPanel Background="{DynamicResource secondColor}" Height="483" Width="319" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="328" Canvas.Top="140">
+                    <Image Source="\Images\magic-films.jpg" Margin="5,90,0,0"></Image>
 
-                <Image Source="\Images\Voxcinema.jpg" Margin="50" Canvas.Left="150" Canvas.Top="100"></Image>
+                </StackPanel>
+                <StackPanel Background="White" Height="318" Width="92" Canvas.Left="446" Canvas.Top="32" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <StackPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </StackPanel.RenderTransform>
+                </StackPanel>
 
-                <Label Content="Admin Panel" FontSize="50" Foreground="{StaticResource firstColor}" Canvas.Left="280" Canvas.Top="400" FontWeight="ExtraLight"></Label>
-                
+                <StackPanel Background="White" Height="318" Width="86" Canvas.Left="449" Canvas.Top="416" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <StackPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </StackPanel.RenderTransform>
+                </StackPanel>
 
-
-                <Border 
+                <Border BorderBrush="{DynamicResource secondColor}"
+                        BorderThickness="5" 
                         Height="483"
                         Width="600"
                         Canvas.Left="647"
-                        Canvas.Top="40" 
+                        Canvas.Top="140" 
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center">
 
                     <Border Margin="140,68,140,68"
+                            BorderBrush="{DynamicResource secondColor}"
+                            BorderThickness="1"
                             CornerRadius="10">
                         <Canvas Margin="9">
+
                             <TextBlock FontSize="23"
                                        TextWrapping="Wrap"
-                                       Height="56" 
+                                       Height="40" 
                                        Width="218"
-                                       Foreground="{DynamicResource tenthColor}"
-                                       Text="LOGIN"
+                                       Foreground="{DynamicResource secondColor}"
+                                       Text="Log in"
                                        FontFamily="\Fonts\#"
-                                       HorizontalAlignment="Left"
-                                       VerticalAlignment="Center" Canvas.Top="32" Canvas.Left="10"/>
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Top" Canvas.Top="21" Canvas.Left="10"/>
 
                             <TextBlock FontSize="13"
                                 TextWrapping="Wrap"
                                 Height="15" 
                                 Width="218"
-                                Foreground="{DynamicResource tenthColor}"
+                                Foreground="{DynamicResource secondColor}"
                                 Text="Username"
                                 FontFamily="\Fonts\#"
-                                Canvas.Top="113" Canvas.Left="14" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                Canvas.Top="84" Canvas.Left="14" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
                             <TextBox Height="40"
                                      Style="{StaticResource MyTextBoxStyle}"
                                      FontSize="17"
                                      Text="{Binding UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                     Padding="10,8,10,0" Canvas.Left="10" Canvas.Top="130" HorizontalAlignment="Center" VerticalAlignment="Center" Width="270"/>
+                                     Padding="10,8,10,0" Canvas.Left="10" Canvas.Top="109" HorizontalAlignment="Center" VerticalAlignment="Top" Width="270"/>
 
                             <TextBlock FontSize="13"
                                        Name="UsernameWarningTB"
@@ -64,16 +87,16 @@
                                        Foreground="Transparent"
                                        Text="Please, fill your username"
                                        FontFamily="\Fonts\#"
-                                       Canvas.Top="174" Canvas.Left="14" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                       Canvas.Top="153" Canvas.Left="14" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
                             <TextBlock FontSize="13"
                                 TextWrapping="Wrap"
                                 Height="15" 
                                 Width="218"
-                                Foreground="{DynamicResource tenthColor}"
+                                Foreground="{DynamicResource secondColor}"
                                 Text="Password"
                                 FontFamily="\Fonts\#"
-                                Canvas.Top="194" Canvas.Left="14" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                Canvas.Top="176" Canvas.Left="14" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
                             <PasswordBox
                                 FontSize="17"
@@ -82,9 +105,9 @@
                                 Padding="10,6,10,0"
                                 x:Name="PasswordBox" 
                                 Canvas.Left="10" 
-                                Canvas.Top="210" 
-                                HorizontalAlignment="Left" 
-                                VerticalAlignment="Center">
+                                Canvas.Top="200" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Top">
                                 <PasswordBox.Style>
                                     <Style TargetType="{x:Type PasswordBox}">
                                         <Style.Resources>
@@ -133,7 +156,7 @@
                                        Foreground="Transparent"
                                        Text="Please, fill your password"
                                        FontFamily="\Fonts\#"
-                                       Canvas.Top="255" Canvas.Left="14" HorizontalAlignment="Center" VerticalAlignment="Top">
+                                       Canvas.Top="243" Canvas.Left="14" HorizontalAlignment="Center" VerticalAlignment="Top">
                             </TextBlock>
 
                             <Button Content="Log In" Command="{Binding SignInCommand}" Style="{StaticResource MyButtonStyle14}" FontSize="20" Canvas.Left="89" Canvas.Top="221" VerticalAlignment="Top" Height="29" Width="112"/>

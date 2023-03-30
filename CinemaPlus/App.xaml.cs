@@ -71,7 +71,7 @@ namespace CinemaPlus
         public static LogoUCViewModel LogoUCViewModel { get; internal set; }
         public static Image SessionTabImage { get; internal set; }
         public static Rectangle Headline { get; internal set; }
-        public static Grid AdminTools { get; internal set; }
+        public static Grid AdminTools { get; internal set; } = new Grid();
         public static AdminHomePageUC AdminHomePage { get; internal set; }
         public static EditMovieSeatsTabUCViewModel SeatsTabViewModel { get; internal set; }
         public static bool AdminSideEditSide { get; internal set; }
@@ -84,7 +84,6 @@ namespace CinemaPlus
         {
             if (IsInAdminSide)
             {
-                App.LogoUCViewModel.LogoImage = @"\Images\cinemaKhanLogoDark.png";
                 SolidColorBrush MyBrush = (SolidColorBrush)new BrushConverter().ConvertFrom("#383838");
                 SolidColorBrush MyBrush2 = (SolidColorBrush)new BrushConverter().ConvertFrom("#808080"); // 
                 Application.Current.Resources["secondColor"] = MyBrush;
@@ -100,36 +99,25 @@ namespace CinemaPlus
 
                 //App.AdminTools.Children.Add(adminToolsView);
 
-                App.LogoUCViewModel.Cursor = Cursors.Arrow;
             }
             else
             {
-                App.LogoUCViewModel.LogoImage = @"\Images\cinemaKhanLogo.png";
-                SolidColorBrush MyBrush = (SolidColorBrush)new BrushConverter().ConvertFrom("#1D429A");
-                SolidColorBrush MyBrush2 = (SolidColorBrush)new BrushConverter().ConvertFrom("#00ACEC");
-                Application.Current.Resources["secondColor"] = MyBrush;
-                Application.Current.Resources["thirdColor"] = MyBrush2;
 
                 var firstToolsView = new FirstToolsUC();
                 var firstToolsViewModel = new FirstToolsUCViewModel();
                 App.FirstToolsViewModel = firstToolsViewModel;
                 firstToolsView.DataContext = firstToolsViewModel;
-                if (App.FirstTools.Children.Count > 0)
-                    App.FirstTools.Children.RemoveAt(0);
-                App.FirstTools.Children.Add(firstToolsView);
+
 
                 var secondToolsView = new SecondToolsUC();
                 var secondToolsViewModel = new SecondToolsUCViewModel();
                 App.SecondToolsViewModel = secondToolsViewModel;
                 secondToolsView.DataContext = secondToolsViewModel;
-                if (App.SecondTools.Children.Count > 0)
-                    App.SecondTools.Children.RemoveAt(0);
-                App.SecondTools.Children.Add(secondToolsView);
+
 
                 if (App.AdminTools.Children.Count > 0)
                     App.AdminTools.Children.RemoveAt(0);
 
-                App.LogoUCViewModel.Cursor = Cursors.Hand;
             }
         }
     }

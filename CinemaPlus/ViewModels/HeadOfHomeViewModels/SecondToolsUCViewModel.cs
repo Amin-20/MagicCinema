@@ -19,7 +19,6 @@ namespace CinemaPlus.ViewModels
         public RelayCommand FaqCommand { get; set; }
 
         public RelayCommand AdminSideCommand { get; set; }
-        public CineBonusUC CineBonusView { get; set; } = new CineBonusUC();
         public AdminSignInUC AdminSignInView { get; set; } = new AdminSignInUC();
         public AdminSignInUCViewModel AdminSignInViewModel { get; set; } = new AdminSignInUCViewModel();
         public SecondToolsUCViewModel()

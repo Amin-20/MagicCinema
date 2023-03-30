@@ -9,7 +9,7 @@
              Width="1500"
              d:DesignHeight="763"
              d:DesignWidth="1500">
-    <Grid Background="{DynamicResource fifthColor}">
+    <Grid Background="{DynamicResource firstColor}">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="100"></RowDefinition>
@@ -18,7 +18,7 @@
 
         <Grid Grid.Row="0">
             <Canvas>
-                <StackPanel Background="{DynamicResource fifthColor}"
+                <StackPanel Background="{DynamicResource secondColor}"
                             VerticalAlignment="Top"
                             HorizontalAlignment="Center"
                             Orientation="Horizontal"
@@ -28,7 +28,7 @@
                     <RadioButton Style="{StaticResource MyRadioButtonStyle2}"
                                      Height="40"
                                      Width="105" 
-                                     Margin="239,0,1,0"
+                                     Margin="279,0,1,0"
                                      FontFamily="\Fonts\#Ponder-Black"
                                      FontSize="19"
                                      FontWeight="Medium"
@@ -38,7 +38,7 @@
                         Today
                     </RadioButton>
 
-                    <!--<RadioButton Style="{StaticResource MyRadioButtonStyle3}"
+                    <RadioButton Style="{StaticResource MyRadioButtonStyle3}"
                                       Height="40"
                                       FontFamily="\Fonts\#Ponder-Black"
                                       FontSize="19"
@@ -46,7 +46,7 @@
                                       Name="TomorrowRB"
                                       Command="{Binding TomorrowIsCheckedCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                         Tomorrow
-                    </RadioButton>-->
+                    </RadioButton>
 
                     <ComboBox Width="205" 
                               Name="datesCBox"
@@ -62,11 +62,10 @@
                         </ie:Interaction.Triggers>
                     </ComboBox>
 
-                    <ComboBox Width="205" 
+                    <!--<ComboBox Width="205" 
                                   Height="40"
                                   Margin="30,0,0,0"
                                   Name="CinemasCB"
-                              IsEnabled="False"
                                   Style="{StaticResource comboBoxStyle}"
                                   ItemsSource="{Binding Cinemas, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                   SelectedIndex="0">
@@ -75,12 +74,12 @@
                                 <ie:InvokeCommandAction Command="{Binding SelectedCinemaChangedCommand}"  CommandParameter="{Binding ElementName=CinemasCB, Path=SelectedItem}"/>
                             </ie:EventTrigger>
                         </ie:Interaction.Triggers>
-                    </ComboBox>
+                    </ComboBox>-->
 
                     <ComboBox Width="205" 
                                   Height="40"
                                   Name="LanguagesCB"                                  
-                                  Margin="30,0,0,0"
+                                  Margin="200,0,0,0"
                                   Style="{StaticResource comboBoxStyle}"
                                   SelectedIndex="0"
                                   ItemsSource="{Binding Languages, Mode =TwoWay, UpdateSourceTrigger=PropertyChanged}">
@@ -94,7 +93,7 @@
             </Canvas>
         </Grid>
 
-        <Grid Grid.Row="1" Background="{StaticResource fifthColor}">
+        <Grid Grid.Row="1">
             <ScrollViewer VerticalScrollBarVisibility="Auto"
                           HorizontalScrollBarVisibility="Disabled"
                           Width="1500"
@@ -102,14 +101,14 @@
                           HorizontalAlignment="Center">
                 <WrapPanel Name="MoviesSchedulesWrapPanel"
                            Width="1310">
-                     <!--<TextBlock Style="{StaticResource MyTextBlockStyle}"
+                    <TextBlock Style="{StaticResource MyTextBlockStyle}"
                                 Text="{Binding Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                 FontSize="20"
                                 TextAlignment="Center"
                                 Margin="0,20,0,0"
                                 HorizontalAlignment="Center"
                                 Height="30" Width="1305">
-                    </TextBlock>-->
+                    </TextBlock>
                 </WrapPanel>
             </ScrollViewer>
         </Grid>

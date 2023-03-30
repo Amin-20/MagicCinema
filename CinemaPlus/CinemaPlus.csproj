@@ -190,12 +190,6 @@
     <Compile Include="Views\UserControls\HeadOfHome\SecondToolsUC.xaml.cs">
       <DependentUpon>SecondToolsUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\UserControls\HomePage\CineBonusUC.xaml.cs">
-      <DependentUpon>CineBonusUC.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\UserControls\HomePage\HomePageUC.xaml.cs">
-      <DependentUpon>HomePageUC.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\UserControls\HomePage\ScheduleUC.xaml.cs">
       <DependentUpon>ScheduleUC.xaml</DependentUpon>
     </Compile>
@@ -204,6 +198,9 @@
     </Compile>
     <Compile Include="Views\UserControls\HomePage\TodayUC.xaml.cs">
       <DependentUpon>TodayUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HomePage\HomePageUC.xaml.cs">
+      <DependentUpon>HomePageUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\MovieUC\AnotherMoviesUC.xaml.cs">
       <DependentUpon>AnotherMoviesUC.xaml</DependentUpon>
@@ -296,6 +293,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UserControls\AdminSide\PurchasedTicketsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\HomePage\HomePageUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -392,14 +393,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\UserControls\HeadOfHome\SecondToolsUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\UserControls\HomePage\CineBonusUC.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\UserControls\HomePage\HomePageUC.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -542,6 +535,68 @@
   <ItemGroup>
     <Resource Include="Images\noImage.jpg" />
     <Resource Include="Images\qrcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AboutUs.jpeg" />
+    <Resource Include="Images\account.png" />
+    <Resource Include="Images\accountGray.png" />
+    <Resource Include="Images\accountLight.png" />
+    <Resource Include="Images\addIcon.png" />
+    <Resource Include="Images\androidLogo.png" />
+    <Resource Include="Images\appleLogo.png" />
+    <Resource Include="Images\areYouSureCloseButton.png" />
+    <Resource Include="Images\arrow_down.png" />
+    <Resource Include="Images\arrow_up.png" />
+    <Resource Include="Images\availableAppStore.png" />
+    <Resource Include="Images\backButton.png" />
+    <Resource Include="Images\backButtonAdminSide.png" />
+    <Resource Include="Images\backButtons.png" />
+    <Resource Include="Images\BlackCrab.jpg" />
+    <Resource Include="Images\callIcon.png" />
+    <Resource Include="Images\ChekGif.gif" />
+    <Resource Include="Images\clear.png" />
+    <Resource Include="Images\close.png" />
+    <Resource Include="Images\closeWhite.png" />
+    <Resource Include="Images\deleteImage.png" />
+    <Resource Include="Images\Done.png" />
+    <Resource Include="Images\DoneGif.gif" />
+    <Resource Include="Images\dragFileIcon.jpeg" />
+    <Resource Include="Images\facebook.png" />
+    <Resource Include="Images\GetGooglePlay.png" />
+    <Resource Include="Images\instaLogo.png" />
+    <Resource Include="Images\loading.gif" />
+    <Resource Include="Images\loginwpf.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\magic-films.jpg" />
+    <Resource Include="Images\mainTabImage.png" />
+    <Resource Include="Images\mainTabImageWhite.png" />
+    <Resource Include="Images\notfound.png" />
+    <Resource Include="Images\Ok1.png" />
+    <Resource Include="Images\Phone.png" />
+    <Resource Include="Images\plotTabImage.png" />
+    <Resource Include="Images\plotTabImageWhite.png" />
+    <Resource Include="Images\posterTabImage.png" />
+    <Resource Include="Images\posterTabImageWhite.png" />
+    <Resource Include="Images\Rules.jpeg" />
+    <Resource Include="Images\seat.png" />
+    <Resource Include="Images\seatsTabImage.png" />
+    <Resource Include="Images\seatsTabImageWhite.png" />
+    <Resource Include="Images\sessionsTabImage.png" />
+    <Resource Include="Images\sessionsTabImageWhite.png" />
+    <Resource Include="Images\starIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MoviePosters\65Movie.jpg" />
+    <Resource Include="Images\MoviePosters\antman3Movie.jpg" />
+    <Resource Include="Images\MoviePosters\Avatar2Movie.jpg" />
+    <Resource Include="Images\MoviePosters\cinSuretiMovie.jpg" />
+    <Resource Include="Images\MoviePosters\hayeller-ulkesiMovie.jpg" />
+    <Resource Include="Images\MoviePosters\johnWickMovie.jpg" />
+    <Resource Include="Images\MoviePosters\KotMovie.jpg" />
+    <Resource Include="Images\MoviePosters\Scream6Movie.jpg" />
+    <Resource Include="Images\MoviePosters\ShazamMovie.jpg" />
+    <Resource Include="Images\MoviePosters\timeTravelerMovie.png" />
+    <Resource Include="Images\MoviePosters\zonaMovie.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Web.WebView2.1.0.1370.28\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.1370.28\build\Microsoft.Web.WebView2.targets')" />

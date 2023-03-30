@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.ViewModels.Movie"
              mc:Ignorable="d" 
              Height="580"
              Width="276"
@@ -26,7 +27,7 @@
                         <EventTrigger.Actions>
                             <BeginStoryboard>
                                 <Storyboard x:Name="TitleTextBoxMouseOverSB">
-                                    <ColorAnimation To="#000000" 
+                                    <ColorAnimation To="Black" 
                                                     x:Name="BackgroundColorAnimationOfTbInMouseOver"
                                     Storyboard.TargetName="titleTextBlock"
                                     Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" 
@@ -51,7 +52,7 @@
                                     Storyboard.TargetName="titleTextBlock"      
                                     Storyboard.TargetProperty="(TextBlock.Background).(SolidColorBrush.Color)" 
                                     FillBehavior="HoldEnd" 
-                                    Duration="0:0:0.1"/>
+                                    Duration="0:0:0.4"/>
                                 <ColorAnimation To="#000000" 
                                                 x:Name="ForegroundColorAnimationOfTbInMouseLeave"
                                     Storyboard.TargetName="titleTextBlock"
@@ -98,7 +99,7 @@
                     </EventTrigger>-->
 
                 </StackPanel.Triggers>
-                <Border Height="60">
+                <Border BorderBrush="{x:Null}" Height="60">
                     <TextBlock Text="{Binding Movie.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                            Width="276" 
                            Height="64" 
@@ -142,7 +143,7 @@
                             Orientation="Horizontal" 
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center" 
-                            Canvas.Left="48">
+                            Canvas.Left="68">
                 </StackPanel>
                 <Button Style="{StaticResource MyButtonStyle3}"
                         Command="{Binding SessionsCommand}"

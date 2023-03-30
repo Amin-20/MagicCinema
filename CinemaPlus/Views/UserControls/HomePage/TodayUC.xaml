@@ -9,7 +9,7 @@
              Width="1500"
              d:DesignHeight="763"
              d:DesignWidth="1500">
-    <Grid Background="{DynamicResource fifthColor}">
+    <Grid Background="{DynamicResource firstColor}">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="100"></RowDefinition>
@@ -18,14 +18,14 @@
 
         <Grid Grid.Row="0">
             <Canvas>
-                <StackPanel Background="{DynamicResource fifthColor}"
+                <StackPanel Background="{DynamicResource secondColor}"
                                 VerticalAlignment="Top"
                                     HorizontalAlignment="Center"
                                 Orientation="Horizontal"
                                 Height="100"
                                 Width="1500">
 
-                    <ComboBox Width="205" 
+                    <!--<ComboBox Width="205" 
                               Height="40"
                               Margin="430,0,0,0"
                               Style="{StaticResource comboBoxStyle}"
@@ -37,11 +37,11 @@
                                 <ie:InvokeCommandAction Command="{Binding CinemaChangedCommand}"  CommandParameter="{Binding ElementName=CinemaCB, Path=SelectedItem}"/>
                             </ie:EventTrigger>
                         </ie:Interaction.Triggers>
-                    </ComboBox>
+                    </ComboBox>-->
 
                     <ComboBox Width="205" 
                               Height="40"
-                              Margin="30,0,0,0"
+                              Margin="500,0,0,0"
                               Style="{StaticResource comboBoxStyle}"
                               Name="LanguageCB"
                               SelectedIndex="0"
@@ -56,7 +56,7 @@
                     <ToggleButton Style="{StaticResource MyToggleButtonStyle}"
                                   Height="40"
                                   Width="205"
-                                  Margin="30,0,430,0"
+                                  Margin="170,0,430,0"
                                   Name="EnglishTB">
                         <ie:Interaction.Triggers>
                             <ie:EventTrigger EventName="Checked">

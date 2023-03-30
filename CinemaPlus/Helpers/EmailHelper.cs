@@ -35,10 +35,10 @@ namespace CinemaPlus.Helpers
                     client.EnableSsl = true;
                     client.DeliveryMethod = SmtpDeliveryMethod.Network;
                     client.UseDefaultCredentials = true;
-                    client.Credentials = new NetworkCredential("voxcinema.cinema@outlook.com", "Vox12341234");
+                    client.Credentials = new NetworkCredential("magiccinema1@outlook.com", "cinemamagic123");
                     MailMessage mailMessage = new MailMessage();
                     mailMessage.To.Add(toGmail);
-                    mailMessage.From = new MailAddress("voxcinema.cinema@outlook.com", "VOX cinema");
+                    mailMessage.From = new MailAddress("magiccinema1@outlook.com", "Magic Cinema");
                     mailMessage.Subject = messageSubject;
                     mailMessage.Body = message;
 
@@ -66,7 +66,7 @@ namespace CinemaPlus.Helpers
                     }
 
                     client.Port = 587;
-                    client.Credentials = new System.Net.NetworkCredential("voxcinema.cinema@outlook.com", "Vox12341234");
+                    client.Credentials = new System.Net.NetworkCredential("magiccinema1@outlook.com", "cinemamagic123");
                     client.EnableSsl = true;
                     client.Send(mailMessage);
                 }
@@ -74,7 +74,9 @@ namespace CinemaPlus.Helpers
             catch (Exception)
             {
 
+                throw;
             }
+
         }
     }
 }

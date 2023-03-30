@@ -14,15 +14,14 @@
     </Style>
 
     <Style x:Key="MyButtonStyle1" TargetType="Button" BasedOn="{StaticResource ButtonBaseStyle}">
-        <Setter Property="Background" Value="Transparent"></Setter>
-        <Setter Property="Background" Value="{DynamicResource fifthColor}"></Setter>
-        <Setter Property="Foreground" Value="{StaticResource firstColor}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource firstColor}"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource fourthColor}"></Setter>
         <Setter Property="BorderBrush" Value="Transparent"></Setter>
-        
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Background="{TemplateBinding Background}">
+                    <Border CornerRadius="6,6,0,0" Background="{TemplateBinding Background}">
                         <Grid>
                             <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
                         </Grid>
@@ -30,11 +29,11 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Foreground" Value="{StaticResource tenthColor}" ></Setter>
+                            <Setter Property="Foreground" Value="{StaticResource fifthColor}" ></Setter>
                         </Trigger>
-                        
+
                         <Trigger Property="IsMouseOver" Value="False">
-                            <Setter Property="Foreground" Value="{StaticResource firstColor}" ></Setter>
+                            <Setter Property="Foreground" Value="{StaticResource fourthColor}" ></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -43,8 +42,7 @@
     </Style>
 
     <Style x:Key="MyButtonStyle2" TargetType="Button" BasedOn="{StaticResource ButtonBaseStyle}">
-        <Setter Property="Background" Value="Transparent"></Setter>
-        <Setter Property="Background" Value="{DynamicResource fifthColor}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource thirdColor}"></Setter>
         <Setter Property="Foreground" Value="{DynamicResource firstColor}"></Setter>
         <Setter Property="BorderBrush" Value="Transparent"></Setter>
         <Setter Property="FontSize" Value="20"></Setter>
@@ -61,11 +59,11 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Foreground" Value="{DynamicResource tenthColor}" ></Setter>
+                            <Setter Property="Background" Value="{DynamicResource secondColor}" ></Setter>
                         </Trigger>
 
                         <Trigger Property="IsMouseOver" Value="False">
-                            <Setter Property="Foreground" Value="{DynamicResource firstColor}" ></Setter>
+                            <Setter Property="Background" Value="{DynamicResource thirdColor}" ></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -74,7 +72,7 @@
     </Style>
 
     <Style x:Key="MyButtonStyle3" TargetType="Button" BasedOn="{StaticResource ButtonBaseStyle}">
-        <Setter Property="Background" Value="{DynamicResource fourthColor}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource secondColor}"></Setter>
         <Setter Property="Foreground" Value="{DynamicResource firstColor}"></Setter>
         <Setter Property="BorderBrush" Value="Transparent"></Setter>
         <Setter Property="FontSize" Value="15"></Setter>
@@ -94,12 +92,11 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource tenthColor}" ></Setter>
+                            <Setter Property="Background" Value="{DynamicResource backUpColor}" ></Setter>
                         </Trigger>
 
                         <Trigger Property="IsMouseOver" Value="False">
-                            <Setter Property="Background" Value="{DynamicResource fifthColor}" ></Setter>
-                            <Setter Property="Foreground" Value="{DynamicResource firstColor}" ></Setter>
+                            <Setter Property="Background" Value="{DynamicResource secondColor}" ></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -112,7 +109,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="border" Background="{DynamicResource firstColor}" SnapsToDevicePixels="True" CornerRadius="0,14,14,0">
+                    <Border x:Name="border" BorderBrush="{DynamicResource thirdColor}" BorderThickness="1,3,3,3" Background="{DynamicResource firstColor}" SnapsToDevicePixels="True" CornerRadius="0,14,14,0">
                         <Grid>
                             <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
                         </Grid>
@@ -120,11 +117,11 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource tenthColor}" ></Setter>
+                            <Setter Property="Background" Value="{DynamicResource thirdColor}" ></Setter>
                         </Trigger>
 
                         <Trigger Property="IsMouseOver" Value="False">
-                            <Setter Property="Background" Value="{DynamicResource firstColor}" ></Setter>
+                            <Setter Property="Background" Value="{DynamicResource secondColor}" ></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -133,7 +130,7 @@
     </Style>
 
     <Style x:Key="MyButtonStyle5" TargetType="Button" BasedOn="{StaticResource ButtonBaseStyle}">
-        <Setter Property="Background" Value="{StaticResource tenthColor}"></Setter>
+        <Setter Property="Background" Value="{StaticResource ninthColor}"></Setter>
         <Setter Property="Foreground" Value="{DynamicResource firstColor}"></Setter>
         <Setter Property="BorderBrush" Value="Transparent"></Setter>
         <Setter Property="FontSize" Value="20"></Setter>
@@ -154,7 +151,7 @@
                         </Trigger>
 
                         <Trigger Property="IsMouseOver" Value="False">
-                            <Setter Property="Background" Value="{StaticResource tenthColor}" ></Setter>
+                            <Setter Property="Background" Value="{StaticResource ninthColor}" ></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -254,10 +251,10 @@
     </Style>
 
     <Style x:Key="MyButtonStyle9" TargetType="Button" BasedOn="{StaticResource ButtonBaseStyle}">
-        <Setter Property="Background" Value="transparent"></Setter>
-        <Setter Property="Foreground" Value="{StaticResource tenthColor}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource ninthColor}"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource fifthColor}"></Setter>
         <Setter Property="FontSize" Value="20"></Setter>
-        <Setter Property="BorderBrush" Value="Transparent"></Setter> 
+        <Setter Property="BorderBrush" Value="Transparent"></Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -268,12 +265,12 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="{StaticResource fifthColor}"></Setter>
+                            <Setter Property="Background" Value="{StaticResource tenthColor}"></Setter>
                             <Setter Property="Foreground" Value="{StaticResource firstColor }"></Setter>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="False">
-                            <Setter Property="Background" Value="Transparent"></Setter>
-                            <Setter Property="Foreground" Value="{StaticResource tenthColor}"></Setter>
+                            <Setter Property="Background" Value="{StaticResource ninthColor}"></Setter>
+                            <Setter Property="Foreground" Value="{StaticResource fifthColor}"></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -329,7 +326,7 @@
                             <Setter Property="Background" Value="{StaticResource tenthColor}"></Setter>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="False">
-                            <Setter Property="Background" Value="{StaticResource fourthColor}"></Setter>
+                            <Setter Property="Background" Value="{StaticResource ninthColor}"></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -338,7 +335,7 @@
     </Style>
 
     <Style x:Key="MyButtonStyle12" TargetType="Button" BasedOn="{StaticResource ButtonBaseStyle}">
-        <Setter Property="Background" Value="green"></Setter>
+        <Setter Property="Background" Value="{DynamicResource backUpColor}"></Setter>
         <Setter Property="Foreground" Value="{DynamicResource firstColor}"></Setter>
         <Setter Property="BorderBrush" Value="Transparent"></Setter>
         <Setter Property="FontSize" Value="20"></Setter>
@@ -355,11 +352,11 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="LightGreen" ></Setter>
+                            <Setter Property="Background" Value="#1D429A" ></Setter>
                         </Trigger>
 
                         <Trigger Property="IsMouseOver" Value="False">
-                            <Setter Property="Background" Value="green" ></Setter>
+                            <Setter Property="Background" Value="{DynamicResource backUpColor}" ></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -398,7 +395,7 @@
     </Style>
 
     <Style x:Key="MyButtonStyle14" TargetType="Button" BasedOn="{StaticResource ButtonBaseStyle}">
-        <Setter Property="Background" Value="{DynamicResource tenthColor}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource secondColor}"></Setter>
         <Setter Property="Foreground" Value="{DynamicResource firstColor}"></Setter>
         <Setter Property="BorderBrush" Value="Transparent"></Setter>
         <Setter Property="FontSize" Value="15"></Setter>
@@ -418,11 +415,11 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource fourthColor}" ></Setter>
+                            <Setter Property="Background" Value="{DynamicResource backUpColor}" ></Setter>
                         </Trigger>
 
                         <Trigger Property="IsMouseOver" Value="False">
-                            <Setter Property="Background" Value="{DynamicResource tenthColor}" ></Setter>
+                            <Setter Property="Background" Value="{DynamicResource secondColor}" ></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -447,7 +444,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <Border Background="{TemplateBinding Background}">
+                    <Border CornerRadius="6,6,0,0" Background="{TemplateBinding Background}">
                         <Grid>
                             <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
                         </Grid>
@@ -455,9 +452,7 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource fifthColor}" ></Setter>
-
-                            <Setter Property="Background" Value="{DynamicResource fifthColor}" ></Setter>
+                            <Setter Property="Background" Value="{DynamicResource secondColor}" ></Setter>
                             <Setter Property="Foreground" Value="{DynamicResource firstColor}" ></Setter>
                         </Trigger>
 
@@ -483,7 +478,7 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource tenthColor}" ></Setter>
+                            <Setter Property="Background" Value="{DynamicResource thirdColor}" ></Setter>
                             <Setter Property="Foreground" Value="{DynamicResource firstColor}" ></Setter>
                         </Trigger>
 
@@ -499,28 +494,28 @@
 
     <Style x:Key="MyRadioButtonStyle3" TargetType="RadioButton" BasedOn="{StaticResource RadioButtonBaseStyle}">
         <Setter Property="Template">
-        <Setter.Value>
-            <ControlTemplate TargetType="{x:Type RadioButton}">
-                <Border CornerRadius="0,0,0,0" Background="{TemplateBinding Background}">
-                    <Grid>
-                        <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
-                    </Grid>
-                </Border>
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border CornerRadius="0,0,0,0" Background="{TemplateBinding Background}">
+                        <Grid>
+                            <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                        </Grid>
+                    </Border>
 
-                <ControlTemplate.Triggers>
-                    <Trigger Property="IsChecked" Value="True">
-                        <Setter Property="Background" Value="{DynamicResource tenthColor}" ></Setter>
-                        <Setter Property="Foreground" Value="{DynamicResource firstColor}" ></Setter>
-                    </Trigger>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource thirdColor}" ></Setter>
+                            <Setter Property="Foreground" Value="{DynamicResource firstColor}" ></Setter>
+                        </Trigger>
 
-                    <Trigger Property="IsChecked" Value="False">
-                        <Setter Property="Background" Value="{DynamicResource firstColor}" ></Setter>
-                        <Setter Property="Foreground" Value="{StaticResource fifthColor}" ></Setter>
-                    </Trigger>
-                </ControlTemplate.Triggers>
-            </ControlTemplate>
-        </Setter.Value>
-    </Setter>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter Property="Background" Value="{DynamicResource firstColor}" ></Setter>
+                            <Setter Property="Foreground" Value="{StaticResource fifthColor}" ></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <Style x:Key="MyRadioButtonStyle4" TargetType="RadioButton">
@@ -545,13 +540,13 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="Transparent" ></Setter>
+                            <Setter Property="Background" Value="{StaticResource tenthColor}" ></Setter>
                             <Setter Property="Foreground" Value="{DynamicResource firstColor}" ></Setter>
                         </Trigger>
 
                         <Trigger Property="IsChecked" Value="False">
-                            <Setter Property="Background" Value="Transparent" ></Setter>
-                            <Setter Property="Foreground" Value="{StaticResource tenthColor }" ></Setter>
+                            <Setter Property="Background" Value="{StaticResource ninthColor}" ></Setter>
+                            <Setter Property="Foreground" Value="{StaticResource fifthColor }" ></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -635,7 +630,7 @@
     </Style>
 
     <Style x:Key="ToggleButtonBaseStyle" TargetType="ToggleButton">
-        <Setter Property="Background" Value="{DynamicResource tenthColor}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource secondColor}"></Setter>
         <Setter Property="Foreground" Value="{DynamicResource firstColor}"></Setter>
         <Setter Property="BorderBrush" Value="Transparent"></Setter>
         <Setter Property="Height" Value="60"></Setter>
@@ -646,7 +641,7 @@
         <Setter Property="Cursor" Value="Hand"></Setter>
         <Setter Property="Margin" Value="30,0,0,0"></Setter>
     </Style>
-    
+
     <Style x:Key="MyToggleButtonStyle" TargetType="ToggleButton" BasedOn="{StaticResource ToggleButtonBaseStyle}">
         <Setter Property="Template">
             <Setter.Value>
@@ -664,7 +659,7 @@
                         </Trigger>
 
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource tenthColor}" ></Setter>
+                            <Setter Property="Background" Value="{DynamicResource thirdColor}" ></Setter>
                             <Setter Property="Foreground" Value="{DynamicResource firstColor}" ></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -680,7 +675,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <Border CornerRadius="20" BorderThickness="2" BorderBrush="{StaticResource firstColor}" Background="{TemplateBinding Background}" >
+                    <Border CornerRadius="20" BorderThickness="2" BorderBrush="{StaticResource fourthColor}" Background="{TemplateBinding Background}">
                         <Grid>
                             <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
                         </Grid>
@@ -693,7 +688,7 @@
                         </Trigger>
 
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="RED" ></Setter>
+                            <Setter Property="Background" Value="{DynamicResource backUpColor}" ></Setter>
                             <Setter Property="Foreground" Value="{DynamicResource firstColor}" ></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -704,12 +699,10 @@
 
 
     <Style x:Key="LanguageButtonStyle" TargetType="Button" BasedOn="{StaticResource ButtonBaseStyle}">
-        <Setter Property="Background" Value="Transparent"></Setter>
-        <Setter Property="Foreground" Value="{StaticResource fourthColor}"></Setter>
-        <Setter Property="Background" Value="{DynamicResource fifthColor}"></Setter>
-        <Setter Property="Foreground" Value="{StaticResource firstColor}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource firstColor}"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource fifthColor}"></Setter>
         <Setter Property="BorderBrush" Value="Transparent"></Setter>
-        
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">

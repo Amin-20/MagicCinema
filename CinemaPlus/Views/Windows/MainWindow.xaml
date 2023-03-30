@@ -25,41 +25,14 @@
                 <ColumnDefinition Width="3*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-
-            <!--Half Of Headline And Cinema Khan Logo-->
             <Grid Grid.Row="0" 
               Grid.Column="0"
               Grid.RowSpan="2"
               x:Name="LogoGrid" 
               Width="Auto"
-              Height="Auto">
+              Height="Auto" Grid.ColumnSpan="2" Margin="0,0,570,0">
             </Grid>
 
-            <!--Half Of Headline And Tools-->
-            <!--First Tools-->
-            <Grid Grid.Row="0"
-              Grid.Column="1"
-              Background="{StaticResource firstColor}"
-              Name="FirstTools" Height="126" VerticalAlignment="Top" Grid.RowSpan="2">
-
-            </Grid>
-
-            <Grid Grid.Row="0"
-                  Grid.RowSpan="2"
-                  Grid.Column="1"
-                  Panel.ZIndex="1"
-                  Name="AdminTools">
-
-            </Grid>
-
-            <!--SecondTools-->
-            <Grid Grid.Row="1"  
-              Grid.Column="1"
-              Background="{StaticResource firstColor}"
-              Name="SecondTools">
-            </Grid>
-
-            <!--Page-->
             <Grid Grid.Row="2"
               Grid.Column="0"
               Grid.ColumnSpan="2"

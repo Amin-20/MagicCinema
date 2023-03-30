@@ -9,7 +9,7 @@
              d:DesignWidth="1300"
              Height="90"
              Width="1275"
-             Background="{DynamicResource fifthColor}">
+             Background="{DynamicResource firstColor}">
     <Grid>
         <TextBlock TextAlignment="Center"
                    FontFamily="\Fonts\#Ponder-Black"

@@ -6,30 +6,33 @@
              xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.Home"
              mc:Ignorable="d" 
              d:DesignHeight="180"
-             d:DesignWidth="772"
+             d:DesignWidth="770"
              MinHeight="100"
              MinWidth="100"
-             Height="280"
+             Height="180"
              Width="770"
-             HorizontalAlignment="Center"
+             HorizontalAlignment="Right"
              VerticalAlignment="Center">
     <Grid>
-        <Border BorderBrush="{StaticResource fifthColor}"
+        <Border 
                 BorderThickness="0,1,0,0">
-            <DockPanel Background="{DynamicResource fifthColor}">
-                <Image Source="\Images\vox1.jpg"
-                       HorizontalAlignment="right"
-                       Cursor="{Binding Cursor,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
-                    <Image.InputBindings>
-                        <MouseBinding Gesture="LeftClick" Command="{Binding LogoCommand}"/>
-                    </Image.InputBindings>
-                </Image>
+            <DockPanel Background="White">
+                <Image Source="/Images/magic-films.jpg"
+                       Width="246" Height="197"/>
             </DockPanel>
         </Border>
-            <Label  Style="{StaticResource MyLabelStyle}" Foreground="white" Content="Admin Side" FontSize="20" Height="32" Width="132">
-                <Label.InputBindings> 
-                    <MouseBinding Gesture="LeftClick" Command = "{Binding AdminSideCommand}"/>
-                </Label.InputBindings>
-            </Label>
+        
+        <Label  Style="{StaticResource MyLabelStyle}" Foreground="Black" Content="Admin Panel" FontSize="15" Height="32" Width="95" Margin="669,0,0,0" HorizontalAlignment="Left">
+            <Label.InputBindings>
+                <MouseBinding Gesture="LeftClick" Command = "{Binding AdminSideCommand}"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Style="{StaticResource MyLabelStyle}" Foreground="Black" Content="Home Panel" FontSize="15" Height="32" Width="92" Margin="9,0,0,0" HorizontalAlignment="Left">
+            <Label.InputBindings>
+                <MouseBinding Gesture="LeftClick" Command = "{Binding HomeCommand}"/>
+            </Label.InputBindings>
+        </Label>
+
     </Grid>
 </UserControl>
