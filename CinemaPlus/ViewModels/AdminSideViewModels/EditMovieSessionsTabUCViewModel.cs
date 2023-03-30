@@ -93,9 +93,9 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
                 MovieSchedulesToEditWrapPanel.Children.Add(movieSessionView);
                 if (App.AdminSideAddSide)
                 {
-                    movieSessionView.EditButton.Visibility = Visibility.Collapsed;
-                    movieSessionView.EditButton.IsEnabled = false;
-                    movieSessionView.border.Visibility = Visibility.Collapsed;
+                    //movieSessionView.EditButton.Visibility = Visibility.Collapsed;
+                    //movieSessionView.EditButton.IsEnabled = false;
+                    //movieSessionView.border.Visibility = Visibility.Collapsed;
                     //movieSessionView.Margin = new Thickness(100, 0, 0, 0);
                     movieSessionView.Width += 200;
                 }

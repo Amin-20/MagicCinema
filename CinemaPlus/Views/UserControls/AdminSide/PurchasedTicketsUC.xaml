@@ -9,11 +9,11 @@
              Width="1500"
              d:DesignHeight="763"
              d:DesignWidth="1500">
-    <Grid Background="{StaticResource fifthColor}">
+    <Grid Background="{StaticResource firstColor}">
         <Border Margin="414,30,414,643">
             <TextBlock Text="Purchased Tickets"
                        FontSize="60"
-                       Foreground="{StaticResource tenthColor}"
+                       Foreground="{StaticResource fifthColor}"
                        TextAlignment="Center">
 
             </TextBlock>
@@ -32,5 +32,6 @@
                 </WrapPanel>
             </ScrollViewer>
         </Border>
+
     </Grid>
 </UserControl>

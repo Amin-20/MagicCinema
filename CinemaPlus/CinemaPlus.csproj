@@ -226,9 +226,6 @@
     <Compile Include="Views\UserControls\MovieUC\MovieTrailerUC.xaml.cs">
       <DependentUpon>MovieTrailerUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\UserControls\MovieUC\PopupUC.xaml.cs">
-      <DependentUpon>PopupUC.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\UserControls\MovieUC\ScheduleMovieUC.xaml.cs">
       <DependentUpon>ScheduleMovieUC.xaml</DependentUpon>
     </Compile>
@@ -297,10 +294,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UserControls\HomePage\HomePageUC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\UserControls\MovieUC\PopupUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -597,6 +590,9 @@
     <Resource Include="Images\MoviePosters\ShazamMovie.jpg" />
     <Resource Include="Images\MoviePosters\timeTravelerMovie.png" />
     <Resource Include="Images\MoviePosters\zonaMovie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\leftarrow1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Web.WebView2.1.0.1370.28\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.1370.28\build\Microsoft.Web.WebView2.targets')" />

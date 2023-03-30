@@ -120,7 +120,6 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
             foreach (var item in SessionsTabView.MovieSchedulesToEditWrapPanel.Children)
             {
                 var sessionView = item as MovieSessionUC;
-                sessionView.EditButton.Visibility = Visibility.Collapsed;
             }
 
             App.SessionsTabViewModel = SessionsTabViewModel;

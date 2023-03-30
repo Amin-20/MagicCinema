@@ -5,21 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.AdminSide"
              mc:Ignorable="d" 
-             Height="873"
+             Height="950"
              Width="1500"
-             d:DesignHeight="873" 
              d:DesignWidth="1500"
              Background="{DynamicResource firstColor}"
              VerticalAlignment="Top"
              HorizontalAlignment="Center">
     <Grid>
-        <StackPanel Orientation="Vertical">
-            <StackPanel Orientation="Vertical"
+        <StackPanel Orientation="Vertical" Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center" 
                         VerticalAlignment="Top"
                         Margin="0,50,0,0">
-                <RadioButton Height="150" Command="{Binding EditMovieCommand}" Style="{StaticResource MyRadioButtonStyle}" Width="400" IsChecked="True" DockPanel.Dock="Top">EDIT MOVIE</RadioButton>
-                <RadioButton Height="150" Command="{Binding AddMovieCommand}" Style="{StaticResource MyRadioButtonStyle}" Width="400" DockPanel.Dock="Top">ADD MOVIE</RadioButton>
+                <RadioButton Height="80" Command="{Binding EditMovieCommand}" Style="{StaticResource MyRadioButtonStyle}" Width="404" IsChecked="True" Content="EDIT MOVIE"/>
+                <RadioButton Height="79" Command="{Binding AddMovieCommand}" Style="{StaticResource MyRadioButtonStyle}" Width="400" DockPanel.Dock="Top" Content="ADD MOVIE"/>
             </StackPanel>
 
             <StackPanel Name="AdminPage"

@@ -4,18 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="140" 
-             d:DesignWidth="974"
+             d:DesignHeight="140"
              Height="140"
-             Width="974">
-    <Border BorderBrush="{StaticResource tenthColor}"
+             Width="927">
+    <Border BorderBrush="{StaticResource fifthColor}"
             BorderThickness="0,0,0,1">
 
-        <Grid Background="{DynamicResource fifthColor}" >
+        <Grid Background="{DynamicResource firstColor}" >
             <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -28,55 +24,11 @@
                       Stroke="{StaticResource fifthColor}"
                       StrokeThickness="1">
                 </Line>
-                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
-                       HorizontalAlignment="Center"
-                       Foreground="{StaticResource tenthColor}"
-                       Text="Cinema"
-                       VerticalAlignment="Top"
-                       FontSize="19"
-                       TextAlignment="Center" Height="70" Margin="0,10,0,0" Width="195">
-
-                </TextBlock>
-
-                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
-                       HorizontalAlignment="Center"
-                       Margin="0,47,0,0" 
-                       TextWrapping="Wrap"
-                       Foreground="{StaticResource tenthColor}"
-                       VerticalAlignment="Top"
-                       FontSize="22"
-                       TextAlignment="Center" 
-                       Height="92"
-                       Text="{Binding Cinema, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="195"
-                       >
-                </TextBlock>
             </Grid>
 
-            <Grid Grid.Column="1">
-                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
-                       HorizontalAlignment="Center"
-                       Foreground="{StaticResource tenthColor}"
-                       Text="Hall"
-                       VerticalAlignment="Top"
-                       FontSize="19"
-                       TextAlignment="Center" Height="70" Margin="0,10,0,0" Width="196">
+            <Grid Grid.Column="1"/>
 
-                </TextBlock>
-
-                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
-                       HorizontalAlignment="Center"
-                       Margin="0,47,0,0" 
-                       TextWrapping="Wrap"
-                       VerticalAlignment="Top"
-                       Foreground="{StaticResource tenthColor}"
-                       FontSize="22"
-                       TextAlignment="Center" 
-                       Height="92"
-                       Text="{Binding Hall, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="168">
-                </TextBlock>
-            </Grid>
-
-            <Grid Grid.Column="2">
+            <Grid Grid.Column="00">
                 <TextBlock Style="{StaticResource MyTextBlockStyle2}"
                        HorizontalAlignment="Center"
                        Foreground="{StaticResource tenthColor}"
@@ -101,7 +53,7 @@
                 </TextBlock>
             </Grid>
 
-            <Grid Grid.Column="3">
+            <Grid Grid.Column="1">
                 <TextBlock Style="{StaticResource MyTextBlockStyle2}"
                        HorizontalAlignment="Center"
                        Foreground="{StaticResource tenthColor}"
@@ -126,7 +78,7 @@
                 </TextBlock>
             </Grid>
 
-            <Grid Grid.Column="4">
+            <Grid Grid.Column="2">
                 <TextBlock Style="{StaticResource MyTextBlockStyle2}"
                        HorizontalAlignment="Center"
                        Foreground="{StaticResource tenthColor}"
@@ -151,41 +103,7 @@
                 </TextBlock>
             </Grid>
 
-            <Grid Grid.Column="5">
-                <Border CornerRadius="2"
-                        Height="37"
-                        x:Name="border"
-                        Width="140"
-                        >
-                    <Button Background="Transparent"
-                        ClipToBounds="True"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        x:Name="EditButton"
-                        BorderBrush="Transparent"
-                        FontFamily="\Fonts\#Ponder-Black"
-                        FontSize="30"
-                        FontWeight="Medium"
-                        Width="130"
-                        Style="{StaticResource MyButtonStyle1}"
-                        Foreground="{StaticResource fifthColor}"
-                        Height="37"
-                        Cursor="Hand"
-                        Command="{Binding EditSessionCommand}">
-                        <StackPanel Orientation="Horizontal" 
-                                Width="125"
-                                Height="37">
-                            <TextBlock Foreground="{StaticResource tenthColor}"
-                                   FontSize="20"
-                                   VerticalAlignment="Center"
-                                       TextAlignment="Center"
-                                   FontWeight="Regular" Width="126">
-                                Edit Session
-                            </TextBlock>
-                        </StackPanel>
-                    </Button>
-                </Border>
-            </Grid>
+
         </Grid>
     </Border>
 </UserControl>

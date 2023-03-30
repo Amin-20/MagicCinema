@@ -14,7 +14,7 @@
              Width="984">
     <Grid Background="{DynamicResource fifthColor}">
         <Canvas>
-            <Image Source="\Images\leftarrow.png"
+            <Image Source="\Images\leftarrow1.png"
                    Height="45"
                    Width="55" 
                    HorizontalAlignment="Left"

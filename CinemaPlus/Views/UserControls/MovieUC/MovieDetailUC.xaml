@@ -48,7 +48,6 @@
                    AllowsTransparency="True"
                    HorizontalOffset="-98.5"
                    VerticalOffset="38">
-                <local:PopupUC x:Name="Header"/>
             </Popup>
 
         </Grid>

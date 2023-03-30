@@ -6,9 +6,8 @@
              xmlns:local="clr-namespace:CinemaPlus.Views.UserControls" 
              xmlns:ie="http://schemas.microsoft.com/expression/2010/interactivity"
              mc:Ignorable="d" 
-             Height="563"
+                Height="697"
              Width="1500"
-             d:DesignHeight="563"
              d:DesignWidth="1500"
              Background="{DynamicResource firstColor}">
     <Grid Background="{DynamicResource firstColor}">
@@ -25,25 +24,13 @@
                                 HorizontalAlignment="Center"
                                 Orientation="Horizontal"
                                 Height="100"
-                                Width="1500">
+                                Width="1500"
+                           >
+
 
                     <ComboBox Width="205" 
                               Height="40"
-                              Margin="430,0,0,0"
-                              Style="{StaticResource comboBoxStyle}"
-                              Name="CinemaCB"
-                              SelectedIndex="0"
-                              ItemsSource="{Binding Cinemas, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
-                        <ie:Interaction.Triggers>
-                            <ie:EventTrigger EventName="SelectionChanged">
-                                <ie:InvokeCommandAction Command="{Binding CinemaChangedCommand}"  CommandParameter="{Binding ElementName=CinemaCB, Path=SelectedItem}"/>
-                            </ie:EventTrigger>
-                        </ie:Interaction.Triggers>
-                    </ComboBox>
-
-                    <ComboBox Width="205" 
-                              Height="40"
-                              Margin="30,0,0,0"
+                              Margin="450,0,150,0"
                               Style="{StaticResource comboBoxStyle}"
                               Name="LanguageCB"
                               SelectedIndex="0"
@@ -80,7 +67,7 @@
                           HorizontalScrollBarVisibility="Disabled"
                           Width="1500"
                           Name="EditMoviesTabScroll"
-                          HorizontalAlignment="Center">
+                          HorizontalAlignment="Center" Margin="0,0,0,58">
                 <WrapPanel Name="MoviesForEditWrapPanel"
                            Margin="100,40,100,-15" Width="1280"/>
             </ScrollViewer>

@@ -78,7 +78,7 @@ namespace CinemaPlus.ViewModels.Main
                         string message = "You can't select more than 5 places";
                         MessageBoxButton button = MessageBoxButton.OK;
                         MessageBoxImage icon = MessageBoxImage.Warning;
-                        MessageBox.Show( message, caption, button, icon);
+                        MessageBox.Show(message, caption, button, icon);
                     }
                     else
                     {
@@ -95,7 +95,7 @@ namespace CinemaPlus.ViewModels.Main
                     ConfirmButton.Background = App.ColorsDictionary["thirdColor"] as Brush;
                     ConfirmButton.Cursor = Cursors.Hand;
                     ConfirmButton.IsEnabled = true;
-                    Total = ((int)(PriceOfTicket/100 * SeatCount)).ToString() + ".00 AZN";
+                    Total = ((int)(PriceOfTicket / 100 * SeatCount)).ToString() + ".00 AZN";
                 }
                 else
                 {

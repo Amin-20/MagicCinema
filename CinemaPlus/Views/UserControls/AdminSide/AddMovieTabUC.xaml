@@ -6,9 +6,8 @@
              xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.AdminSide"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              mc:Ignorable="d" 
-            Height="563"
+            Height="699"
              Width="1500"
-             d:DesignHeight="563"
              d:DesignWidth="1500"
              Background="{DynamicResource fifthColor}">
     <Grid>
@@ -68,13 +67,13 @@
 
                     <Button Style="{StaticResource MyButtonStyle4}" 
                             Canvas.Right="400"
-                            Height="46"
-                            Canvas.Top="26"
+                            Height="52"
+                            Canvas.Top="23"
                             FontSize="33"
                             FontFamily="\Fonts\#Ponder-Black"
                             FontWeight="Normal"
                             Cursor="Hand"
-                            Command="{Binding SearchCommand}" Width="55" Canvas.Left="1045" VerticalAlignment="Top"/>
+                            Command="{Binding SearchCommand}" Width="55" Canvas.Left="1045"/>
                     <Image Source="\Images\Search.png" 
                                Height="32"
                                Width="32"
@@ -93,12 +92,13 @@
         </Grid>
 
 
-        <Grid Grid.Row="1" >
+        <Grid Grid.Row="1" Background="White" >
             <ScrollViewer VerticalScrollBarVisibility="Auto"
                           HorizontalScrollBarVisibility="Disabled"
                           Width="1500"
                           Name="SearchUCScroll"
-                          HorizontalAlignment="Center">
+                          
+                          HorizontalAlignment="Center" Margin="0,0,0,53">
                 <WrapPanel Name="SearchedMoviesWrapPanelAdminSide"
                            Margin="100,40,100,-15" Width="1280">
                 </WrapPanel>

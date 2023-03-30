@@ -13,34 +13,13 @@
     <Grid Background="{DynamicResource firstColor}">
         <Grid Margin="-31,0,41,0">
             <Canvas Margin="-10,10,0,-10" HorizontalAlignment="Left" Width="1500">
-                <StackPanel Background="{DynamicResource secondColor}" Height="483" Width="319" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="328" Canvas.Top="140">
-                    <Image Source="\Images\magic-films.jpg" Margin="5,90,0,0"></Image>
+                <StackPanel Background="White" Height="483" Width="393" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="328" Canvas.Top="140">
+                    <Image Source="\Images\magic-films.jpg" Height="443" Width="394"/>
 
-                </StackPanel>
-                <StackPanel Background="White" Height="318" Width="92" Canvas.Left="446" Canvas.Top="32" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
-                    <StackPanel.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="90"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </StackPanel.RenderTransform>
-                </StackPanel>
-
-                <StackPanel Background="White" Height="318" Width="86" Canvas.Left="449" Canvas.Top="416" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
-                    <StackPanel.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="90"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </StackPanel.RenderTransform>
                 </StackPanel>
 
                 <Border BorderBrush="{DynamicResource secondColor}"
-                        BorderThickness="5" 
+                        BorderThickness="0" 
                         Height="483"
                         Width="600"
                         Canvas.Left="647"

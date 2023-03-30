@@ -688,7 +688,7 @@
                         </Trigger>
 
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource backUpColor}" ></Setter>
+                            <Setter Property="Background" Value="red" ></Setter>
                             <Setter Property="Foreground" Value="{DynamicResource firstColor}" ></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>

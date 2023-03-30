@@ -70,7 +70,6 @@ namespace CinemaPlus.Helpers.MovieCellUCHelpers
             MovieDetailUC movieDetailView = new MovieDetailUC();
             var movieDetailUCViewModel = new MovieDetailUCViewModel();
             movieDetailView.DataContext = movieDetailUCViewModel;
-            movieDetailUCViewModel.Header = movieDetailView.Header;
             movieDetailView.Border.Background = App.ColorsDictionary["firstColor"] as Brush;
             movieDetailUCViewModel.ImageSource = Helper.StringToImageSource($@"..\..\Images\2dDark.png");
             movieDetailView.Image.Stretch = Stretch.UniformToFill;
@@ -87,7 +86,6 @@ namespace CinemaPlus.Helpers.MovieCellUCHelpers
             var movieDetailUCViewModel = new MovieDetailUCViewModel();
             movieDetailView.DataContext = movieDetailUCViewModel;
 
-            movieDetailUCViewModel.Header = movieDetailView.Header;
 
             movieDetailView.Border.Background = App.ColorsDictionary["firstColor"] as Brush;
             if (subtitle == Helper.Enums.Subtitles.Azerbaijani)
@@ -118,7 +116,6 @@ namespace CinemaPlus.Helpers.MovieCellUCHelpers
             var movieDetailUCViewModel = new MovieDetailUCViewModel();
             movieDetailView.DataContext = movieDetailUCViewModel;
 
-            movieDetailUCViewModel.Header = movieDetailView.Header;
 
             if (country == "UK")
             {

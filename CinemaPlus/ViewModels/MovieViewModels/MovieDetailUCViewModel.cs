@@ -28,7 +28,6 @@ namespace CinemaPlus.ViewModels.MovieViewModels
             set { toolTipText = value; OnPropertyChanged(); }
         }
 
-        public PopupUC Header { get; internal set; }
 
         public MovieDetailUCViewModel()
         {
@@ -38,7 +37,6 @@ namespace CinemaPlus.ViewModels.MovieViewModels
                 popup.PlacementTarget = popup;
                 popup.Placement = PlacementMode.Bottom;
                 popup.IsOpen = true;
-                (popup.Child as PopupUC).PopupText.Text = ToolTipText;
             });
 
             MouseLeaveCommand = new RelayCommand((_popup) =>
