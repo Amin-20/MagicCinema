@@ -125,13 +125,13 @@
                     Command="{Binding CloseCommand}" HorizontalAlignment="Left" Canvas.Left="944" VerticalAlignment="Center">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
-                        <Grid>
+                        <Grid Background="Red">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="29*"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <ContentPresenter Content=""/>
-                            <Image Source="\Images\closewindow.png" Grid.RowSpan="2"></Image>
+                            <Image Source="\Images\close.png" Grid.RowSpan="2"></Image>
                         </Grid>
                     </ControlTemplate>
                 </Button.Template>

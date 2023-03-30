@@ -530,52 +530,16 @@
     <Resource Include="Images\qrcode.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\AboutUs.jpeg" />
-    <Resource Include="Images\account.png" />
-    <Resource Include="Images\accountGray.png" />
-    <Resource Include="Images\accountLight.png" />
-    <Resource Include="Images\addIcon.png" />
-    <Resource Include="Images\androidLogo.png" />
-    <Resource Include="Images\appleLogo.png" />
-    <Resource Include="Images\areYouSureCloseButton.png" />
-    <Resource Include="Images\arrow_down.png" />
-    <Resource Include="Images\arrow_up.png" />
-    <Resource Include="Images\availableAppStore.png" />
-    <Resource Include="Images\backButton.png" />
     <Resource Include="Images\backButtonAdminSide.png" />
     <Resource Include="Images\backButtons.png" />
-    <Resource Include="Images\BlackCrab.jpg" />
     <Resource Include="Images\callIcon.png" />
-    <Resource Include="Images\ChekGif.gif" />
     <Resource Include="Images\clear.png" />
     <Resource Include="Images\close.png" />
-    <Resource Include="Images\closeWhite.png" />
-    <Resource Include="Images\deleteImage.png" />
     <Resource Include="Images\Done.png" />
-    <Resource Include="Images\DoneGif.gif" />
-    <Resource Include="Images\dragFileIcon.jpeg" />
-    <Resource Include="Images\facebook.png" />
-    <Resource Include="Images\GetGooglePlay.png" />
-    <Resource Include="Images\instaLogo.png" />
-    <Resource Include="Images\loading.gif" />
-    <Resource Include="Images\loginwpf.png" />
-    <Resource Include="Images\logo.png" />
     <Resource Include="Images\magic-films.jpg" />
-    <Resource Include="Images\mainTabImage.png" />
-    <Resource Include="Images\mainTabImageWhite.png" />
     <Resource Include="Images\notfound.png" />
     <Resource Include="Images\Ok1.png" />
     <Resource Include="Images\Phone.png" />
-    <Resource Include="Images\plotTabImage.png" />
-    <Resource Include="Images\plotTabImageWhite.png" />
-    <Resource Include="Images\posterTabImage.png" />
-    <Resource Include="Images\posterTabImageWhite.png" />
-    <Resource Include="Images\Rules.jpeg" />
-    <Resource Include="Images\seat.png" />
-    <Resource Include="Images\seatsTabImage.png" />
-    <Resource Include="Images\seatsTabImageWhite.png" />
-    <Resource Include="Images\sessionsTabImage.png" />
-    <Resource Include="Images\sessionsTabImageWhite.png" />
     <Resource Include="Images\starIcon.png" />
   </ItemGroup>
   <ItemGroup>

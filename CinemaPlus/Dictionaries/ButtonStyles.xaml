@@ -452,7 +452,7 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource secondColor}" ></Setter>
+                            <Setter Property="Background" Value="{DynamicResource fifthColor}" ></Setter>
                             <Setter Property="Foreground" Value="{DynamicResource firstColor}" ></Setter>
                         </Trigger>
 

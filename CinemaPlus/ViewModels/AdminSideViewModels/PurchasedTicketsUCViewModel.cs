@@ -1,4 +1,5 @@
-﻿using CinemaPlus.Helpers;
+﻿using CinemaPlus.Commands;
+using CinemaPlus.Helpers;
 using CinemaPlus.Models;
 using CinemaPlus.ViewModels.EndingViewModels;
 using CinemaPlus.Views.UserControls.AdminSide;
@@ -8,12 +9,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace CinemaPlus.ViewModels.AdminSideViewModels
 {
     public class PurchasedTicketsUCViewModel : BaseViewModel
     {
+        public RelayCommand AdminHomeCommand { get; set; }
+        public RelayCommand IsCheckedRadioButton { get; set; }
         public WrapPanel PurchasedTicketsWrapPanel { get; set; }
 
         public void CreateCellsForPurchasedTickets()
@@ -35,6 +40,18 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
                 purchasedTicketView.DataContext = purchasedTicketViewModel;
                 PurchasedTicketsWrapPanel.Children.Add(purchasedTicketView);
             }
+        }
+
+        public PurchasedTicketsUCViewModel()
+        {
+            AdminHomeCommand = new RelayCommand((a) =>
+            {
+                if (App.PageWrapPanel.Children.Count > 0)
+                {
+                    App.PageWrapPanel.Children.RemoveAt(0);
+                    App.PageWrapPanel.Children.Add(App.AdminHomePage);
+                }
+            });
         }
     }
 }

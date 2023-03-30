@@ -422,7 +422,6 @@
                             Template="{StaticResource ComboBoxToggleButton1}" 
                             Grid.Column="2" 
                             Focusable="false"
-                            IsEnabled="False"
                             IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
                             ClickMode="Press">
                         </ToggleButton>

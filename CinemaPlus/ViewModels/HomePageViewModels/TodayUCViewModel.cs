@@ -164,7 +164,7 @@ namespace CinemaPlus.ViewModels.TabsViewModels
                     if (x != 0) // 2d and subtitle
                     {
                         if (x == 1)
-                            format.Image.Source = Helper.StringToImageSource($@"..\..\Images\2d.png");
+                            format.Image.Source = Helper.StringToImageSource($@"..\..\Images\2dDark.png");
                         format.Image.Stretch = Stretch.UniformToFill;
                         format.Image.Height = movie.Formats[x].Image.Height;
                         format.Image.Width = movie.Formats[x].Image.Width;
