@@ -6,11 +6,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="140"
              Height="140"
-             Width="927">
+             Width="887">
     <Border BorderBrush="{StaticResource fifthColor}"
             BorderThickness="0,0,0,1">
 
-        <Grid Background="{DynamicResource firstColor}" >
+        <Grid Background="{DynamicResource firstColor}" Margin="0,0,10,0" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>

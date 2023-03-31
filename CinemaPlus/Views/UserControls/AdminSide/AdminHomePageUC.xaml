@@ -19,12 +19,15 @@
                         Margin="0,50,0,0">
                 <RadioButton Height="80" Command="{Binding EditMovieCommand}" Style="{StaticResource MyRadioButtonStyle}" Width="404" IsChecked="True" Content="EDIT MOVIE"/>
                 <RadioButton Height="79" Command="{Binding AddMovieCommand}" Style="{StaticResource MyRadioButtonStyle}" Width="400" DockPanel.Dock="Top" Content="ADD MOVIE"/>
+                <Button Style="{StaticResource MyButtonStyle9}" Command="{Binding ViewPurchasedTicketsCommand}" Width="275" Content="View Purchased Tickets" Canvas.Left="160" Height="81"/>
             </StackPanel>
 
             <StackPanel Name="AdminPage"
                     Orientation="Vertical"
                     Height="Auto">
             </StackPanel>
+
         </StackPanel>
+
     </Grid>
 </UserControl>

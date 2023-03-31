@@ -26,13 +26,13 @@
                             Height="30"
                             Canvas.Top="0"
                             Canvas.Right="0"
-                            Cursor="Hand"
+                            Cursor="Hand"                            
                             Command="{Binding CloseCommand}">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
-                                <Grid>
+                                <Grid Background="Red"> 
                                     <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content=""/>
-                                    <Image Source="\Images\closewindow.png"></Image>
+                                    <Image Source="\Images\close.png"></Image>
                                 </Grid>
                             </ControlTemplate>
                         </Button.Template>
@@ -154,10 +154,10 @@
                 <TextBlock Style="{StaticResource MyTextBlockStyle}" 
                        Foreground="{StaticResource fifthColor}"
                        HorizontalAlignment="left"
-                       Width="150"
+                       Width="85"
                        Margin="30,15,0,5"
                        FontSize="14"
-                       Text="Card number (16 digits)">
+                       Text="Card number">
                 </TextBlock>
 
                 <TextBox Height="40"
@@ -189,6 +189,7 @@
                         Width="300" 
                         Height="40"
                         Content="Pay"
+                        Foreground="Black"
                         Command="{Binding PayCommand}">
                 </Button>
             </StackPanel>

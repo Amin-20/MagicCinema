@@ -1,4 +1,7 @@
-﻿using CinemaPlus.Models;
+﻿using CinemaPlus.Commands;
+using CinemaPlus.Helpers;
+using CinemaPlus.Models;
+using CinemaPlus.ViewModels.MovieViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +23,7 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
         public PurchasedTicketCellUCViewModel(Ticket _ticket)
         {
             Ticket = _ticket;
+     
         }
     }
 }

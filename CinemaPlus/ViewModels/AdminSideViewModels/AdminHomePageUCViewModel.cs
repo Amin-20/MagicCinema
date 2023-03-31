@@ -17,14 +17,21 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
     {
         public RelayCommand EditMovieCommand { get; set; }
         public RelayCommand AddMovieCommand { get; set; }
+        public RelayCommand ViewPurchasedTicketsCommand { get; set; }
 
         public EditMovieTabUC EditMovieTabView { get; set; } = new EditMovieTabUC();
         public EditMovieTabUCViewModel EditMovieTabViewModel { get; set; } = new EditMovieTabUCViewModel();
         public AddMovieTabUC AddMovieTabView { get; set; } = new AddMovieTabUC();
         public AddMovieTabUCViewModel AddMovieTabViewModel { get; set; } = new AddMovieTabUCViewModel();
+        public PurchasedTicketsUC PurchasedTicketsView { get; set; } = new PurchasedTicketsUC();
+        public PurchasedTicketsUCViewModel PurchasedTicketsViewModel { get; set; } = new PurchasedTicketsUCViewModel();
 
         public AdminHomePageUCViewModel()
         {
+            PurchasedTicketsView.DataContext = PurchasedTicketsViewModel;
+            PurchasedTicketsViewModel.PurchasedTicketsWrapPanel = PurchasedTicketsView.PurchasedTicketsWrapPanel;
+            PurchasedTicketsViewModel.CreateCellsForPurchasedTickets();
+
             EditMovieTabView.DataContext = EditMovieTabViewModel;
             EditMovieTabViewModel.MoviesForEditWrapPanel = EditMovieTabView.MoviesForEditWrapPanel;
             EditMovieTabViewModel.EditMoviesTabScroll = EditMovieTabView.EditMoviesTabScroll;
@@ -57,6 +64,13 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
                 App.AdminPage.Children.Add(AddMovieTabView);
                 AddMovieTabView.SearchUCScroll.ScrollToTop();
             });
+            ViewPurchasedTicketsCommand = new RelayCommand((v) =>
+            {
+                if (App.PageWrapPanel.Children.Count > 0)
+                    App.PageWrapPanel.Children.RemoveAt(0);
+                App.PageWrapPanel.Children.Add(PurchasedTicketsView);
+            });
+
         }
     }
 }

@@ -22,7 +22,6 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
         public RelayCommand SaveChangesCommand { get; set; }
         public RelayCommand ResetChangesCommand { get; set; }
         public RelayCommand DeleteMovieCommand { get; set; }
-
         public RelayCommand MainTabCheckedCommand { get; set; }
         public RelayCommand MainTabUncheckedCommand { get; set; }
         public RelayCommand PlotTabCheckedCommand { get; set; }
@@ -33,7 +32,6 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
         public RelayCommand SeatsTabUncheckedCommand { get; set; }
         public RelayCommand SessionsTabCheckedCommand { get; set; }
         public RelayCommand SessionsTabUncheckedCommand { get; set; }
-
         public RelayCommand MainTabCommand { get; set; }
         public RelayCommand PlotTabCommand { get; set; }
         public RelayCommand PosterTabCommand { get; set; }
@@ -43,7 +41,6 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
         public Models.Movie SelectedMovie { get; set; }
 
         private string headline;
-
         public string Headline
         {
             get { return headline; }
@@ -78,7 +75,6 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
             SeatsTabView.DataContext = SeatsTabViewModel;
             SeatsTabViewModel.SeatsWrapPanel = SeatsTabView.SeatsWrapPanel;
             SeatsTabViewModel.UpdateBusySeatsOfMovieInDifferentHalls();
-            SeatsTabViewModel.PlacesCB = SeatsTabView.PlacesCB;
             SeatsTabViewModel.RefreshPlacesComboBox();
             App.SeatsTabViewModel = SeatsTabViewModel;
 
@@ -326,9 +322,9 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
                         #endregion
 
                         var _session = SessionsTabViewModel.Sessions[x];
-                        string filename = @"~/../../../Files/Halls\" + _session.Cinema.Replace(" ", string.Empty) + "+" + _session.Hall.Replace(" ", string.Empty) + ".json";
+                        string filename = @"~/../../../Files/Halls\" + _session.Date.Replace(" ", string.Empty) + ".json";
 
-
+                        #region Session
 
                         _changed_movie.Session = _session;
                         List<Models.Movie> hall_movies = new List<Models.Movie>();
@@ -343,18 +339,15 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
                             {
                                 HallName = _session.Hall
                             };
-                            _cinema.Halls.Add(hall);
                             JsonSerialization<Cinema>.Serialize(App.Cinemas, @"~/../../../Files/Defaults\defaultCinemas.json");
                         }
 
 
                         hall_movies.Add(_changed_movie);
                         JsonSerialization<Models.Movie>.Serialize(hall_movies, filename);
+                        #endregion
 
-
-
-
-              
+                        #region OneTime
                         if (!didOneTime)
                         {
                             int i = defaultMovies.FindIndex((m) => m.Title == App.SelectedMovieForEdit.Title);
@@ -362,15 +355,15 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
                             App.DefaultMovies = defaultMovies;
                             JsonSerialization<Models.Movie>.Serialize(defaultMovies, @"~/../../../Files/Defaults\defaultMovies.json");
 
+                            //int i2 = App.Movies.FindIndex((m) => m.Title == App.SelectedMovieForEdit.Title);
+                            //App.Movies[i2] = _changed_movie;
                             didOneTime = true;
 
-                              
+                            // +    
                         }
-                
+                        #endregion
 
                     }
-
-
                     App.ChildWindow.Close();
                     App.Rectangle.Visibility = Visibility.Hidden;
 
@@ -458,7 +451,5 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
                 }
             });
         }
-
-
     }
 }

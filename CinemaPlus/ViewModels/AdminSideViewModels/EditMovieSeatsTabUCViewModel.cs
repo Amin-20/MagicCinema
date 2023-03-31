@@ -40,7 +40,7 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
             set { selectedItem = value; OnPropertyChanged(); }
         }
 
-        public ComboBox PlacesCB { get; set; }
+        public ComboBox PlacesCB { get; set; }=new ComboBox();
 
         public void RefreshPlacesComboBox()
         {

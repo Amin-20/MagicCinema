@@ -15,10 +15,22 @@
                        FontSize="60"
                        Foreground="{StaticResource fifthColor}"
                        TextAlignment="Center">
+        <Button Height="56"
+                Width="60"
+                Name="BackButton"
+                Command="{Binding AdminHomeCommand}"
+                Background="Transparent" 
+                Style="{StaticResource MyButtonStyle1}"
+                Margin="-1850,0,0,0"
+                >            
+            <Image Source="\Images\backButtons.png" 
+                    Width="172">
+            </Image>            
+        </Button>
+                
 
             </TextBlock>
         </Border>
-
         <Border Margin="0,140,0,0">
             <ScrollViewer     VerticalScrollBarVisibility="Auto"
                           HorizontalScrollBarVisibility="Disabled"
@@ -30,6 +42,7 @@
                            Width="1310">
 
                 </WrapPanel>
+
             </ScrollViewer>
         </Border>
 
