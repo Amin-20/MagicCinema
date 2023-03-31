@@ -13,7 +13,7 @@
              d:DesignWidth="974"
              Height="571"
              Width="974">
-    <Grid Background="{DynamicResource fifthColor}">
+    <Grid Background="{DynamicResource firstColor}">
         <Canvas Margin="21,25,-21,-25" x:Name="Canvas">
 
             <TextBlock Style="{StaticResource MyTextBlockStyle2}" Text="Title" FontSize="20" Foreground="{StaticResource tenthColor}" Canvas.Left="15" Canvas.Top="-19" HorizontalAlignment="Center" VerticalAlignment="Top"/>

@@ -104,7 +104,6 @@ namespace CinemaPlus.ViewModels.HomePageViewModels
                                     format.Image.Height = movie.Formats[y].Image.Height;
                                     format.Image.Width = movie.Formats[y].Image.Width;
                                 }
-                                //movieView.MovieDetailsStackPanel.Children.Add(format);
                             }
 
                             SearchedMoviesWrapPanel.Children.Add(movieView);
@@ -148,13 +147,12 @@ namespace CinemaPlus.ViewModels.HomePageViewModels
                 for (int y = 0; y < m.Formats.Count; y++)
                 {
                     var format = new MovieDetailUC { DataContext = m.Formats[y].DataContext };
-                    if (y != 0) // 2d and subtitle
+                    if (y != 0) 
                     {
                         format.Image.Stretch = Stretch.UniformToFill;
                         format.Image.Height = m.Formats[y].Image.Height;
                         format.Image.Width = m.Formats[y].Image.Width;
                     }
-                    //movieCellView.MovieDetailsStackPanel.Children.Add(format);
                 }
 
                 SearchedMoviesWrapPanel.Children.Add(movieCellView);

@@ -34,18 +34,6 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
         {
             Helper.InitializeCinemas();
 
-            //var WeAreBackView = new WeAreBackUC();
-            //var EndingView = new EndingUC();
-            //var endingViewModel = new EndingUCViewModel();
-            //EndingView.DataContext = endingViewModel;
-
-            //App.WeAreBackView = WeAreBackView;
-            //App.EndingView = EndingView;
-            //var EndingView = new EndingUC();
-            //var endingViewModel = new EndingUCViewModel();
-            //EndingView.DataContext = endingViewModel;
-
-            //App.EndingView = EndingView;
 
             var logoView = new LogoUC();
             var logoViewModel = new LogoUCViewModel();
@@ -70,24 +58,9 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
 
             App.HomePageViewModel = homePageViewModel;
             App.HomePage.Children.Add(homePageViewModel.TodayView);
-            //App.MoviesWrapPanel.Children.Add(Helper.RemoveElementFromItsParent(App.WeAreBackView));
-            //App.MoviesWrapPanel.Children.Add(Helper.RemoveElementFromItsParent(App.EndingView));
-            //App.MoviesWrapPanel.Children.Add(Helper.RemoveElementFromItsParent(App.EndingView));
             App.LogoGrid.Children.Add(logoView);
-           // App.FirstTools.Children.Add(firstToolsView);
-           // App.SecondTools.Children.Add(secondToolsView);
             App.PageWrapPanel.Children.Add(homePageView);
             App.PreviousPages.Add(App.PageWrapPanel.Children[0]);
-
-            //var adminHomePageView = new AdminHomePageUC();
-            //var adminHomePageViewModel = new AdminHomePageUCViewModel();
-            //adminHomePageView.DataContext = adminHomePageViewModel;
-            //App.AdminPage = adminHomePageView.AdminPage;
-            //App.AdminPage.Children.Add(adminHomePageViewModel.EditMovieTabView);
-
-            //App.MoviesWrapPanel.Children.Add(Helper.RemoveElementFromItsParent(App.WeAreBackView));
-            //App.MoviesWrapPanel.Children.Add(Helper.RemoveElementFromItsParent(App.EndingView));
-            //App.MoviesWrapPanel.Children.Add(Helper.RemoveElementFromItsParent(App.EndingView));
         }
     }
 }

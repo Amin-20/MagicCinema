@@ -153,7 +153,6 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
                 hasResult = true;
                 var movieView = new MovieCellUC();
                 Color color = ((SolidColorBrush)(App.ColorsDictionary["tenthColor"] as Brush)).Color;
-                //movieView.BackgroundColorAnimationOfTbInMouseOver.To = color;
                 var movieViewModel = new MovieCellUCViewModel();
                 movieViewModel.PosterImageSource = Helper.StringToImageSource(movie.Poster);
                 movieView.DataContext = movieViewModel;

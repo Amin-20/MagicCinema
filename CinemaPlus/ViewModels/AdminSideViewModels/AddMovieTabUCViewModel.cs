@@ -26,7 +26,7 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
         public ScrollViewer SearchUCScrollViewer { get; set; }
         public TextBox SearchTb { get; set; }
 
-        //private readonly string DefaultText = "Search For Movie . . .";
+
 
         public AddMovieTabUCViewModel()
         {
@@ -39,21 +39,6 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
                 }
             });
 
-            //MouseEnterCommand = new RelayCommand((m) =>
-            //{
-            //    if (SearchTb.Text.Trim() == DefaultText)
-            //    {
-            //        SearchTb.Text = String.Empty;
-            //    }
-            //});
-
-            //MouseLeaveCommand = new RelayCommand((m) =>
-            //{
-            //    if (SearchTb.Text.Trim() == String.Empty && SearchTb.IsFocused == false)
-            //    {
-            //        SearchTb.Text = DefaultText;
-            //    }
-            //});
 
             IsFocusedCommand = new RelayCommand((i) =>
             {
@@ -88,7 +73,6 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
                             var movie = movies[x];
                             var movieView = new MovieCellUC();
                             Color color = ((SolidColorBrush)(App.ColorsDictionary["tenthColor"] as Brush)).Color;
-                            //movieView.BackgroundColorAnimationOfTbInMouseOver.To = color;
                             var movieViewModel = new MovieCellUCViewModel();
                             movieView.DataContext = movieViewModel;
                             movieViewModel.Movie = movie;
@@ -130,7 +114,6 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
             {
                 var movieCellView = new MovieCellUC();
                 Color color = ((SolidColorBrush)(App.ColorsDictionary["tenthColor"] as Brush)).Color;
-                //movieCellView.BackgroundColorAnimationOfTbInMouseOver.To = color;
                 var movieViewModel = new MovieCellUCViewModel();
                 movieViewModel.PosterImageSource = Helper.StringToImageSource(m.Poster);
                 movieCellView.DataContext = movieViewModel;

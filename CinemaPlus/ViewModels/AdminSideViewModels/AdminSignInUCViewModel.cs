@@ -70,21 +70,7 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
                 MessageBoxImage icon = MessageBoxImage.Warning;
 
                 MessageBox.Show(message, caption, button, icon);
-                //Notifier notifier = new Notifier(cfg =>
-                //{
-                //    cfg.PositionProvider = new WindowPositionProvider(
-                //        parentWindow: App.Current.MainWindow,
-                //        corner: Corner.TopLeft,
-                //        offsetX: 545,
-                //        offsetY: 305); 
 
-                //    cfg.LifetimeSupervisor = new TimeAndCountBasedLifetimeSupervisor(
-                //        notificationLifetime: TimeSpan.FromSeconds(3),
-                //        maximumNotificationCount: MaximumNotificationCount.FromCount(1));
-
-                //    cfg.Dispatcher = Application.Current.Dispatcher;
-                //});
-                //notifier.ShowError("Admin was not found!");
             });
         }
     }

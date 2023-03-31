@@ -137,21 +137,10 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
 
                 int index = App.SeatsTabViewModel.HallsMovieExists.FindIndex((h) => h.Cinema == currentCinema && h.Hallname == currentHall && h.Date == currentDate);
                 App.SeatsTabViewModel.HallsMovieExists.RemoveAt(index);
-                //App.SeatsTabViewModel.PlacesMovieExists.RemoveAt(index);
-                //App.SeatsTabViewModel.PlacesMovieExists.Remove(App.SeatsTabViewModel.PlacesMovieExists[index]);
-                //App.SeatsTabViewModel.PlacesMovieExists.RemoveAt(index);
-                //var list = App.SeatsTabViewModel.PlacesMovieExists.ToList();
-                //list.RemoveAt(index);
-                //App.SeatsTabViewModel.PlacesMovieExists.Clear();
-                //App.SeatsTabViewModel.PlacesMovieExists.Clear();
-                //App.SeatsTabViewModel.PlacesMovieExists = new ObservableCollection<string>(list);
                 App.SeatsTabViewModel.PlacesMovieExists.RemoveAt(index);
                 App.SeatsTabViewModel.RefreshPlacesComboBox();
                 App.SeatsTabViewModel.BusySeatsOfMovieInDifferentHalls.RemoveAt(index);
                 App.SeatsTabViewModel.HallChangedCommand.Execute(App.SeatsTabViewModel.SelectedIndex);
-                //App.SeatsTabViewModel.SelectedItem = App.SeatsTabViewModel.PlacesMovieExists[0];
-                //App.SeatsTabViewModel.PlacesMovieExists.Remove<string>((p) => App.SeatsTabViewModel.PlacesMovieExists.IndexOf(p) == index);
-                //App.SeatsTabViewModel.PlacesMovieExists.Remove<string>((p) => App.SeatsTabViewModel.PlacesMovieExists.IndexOf(p) == index);
                 int index2 = App.SessionsTabViewModel.Sessions.FindIndex((s) => s.Cinema == currentCinema && s.Hall == currentHall && s.Date == currentDate.Split(',').ElementAt(0).Trim() && s.Time == s.Time);
                 App.SessionsTabViewModel.Sessions.RemoveAt(index2);
 
@@ -164,7 +153,6 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
                 App.ChildWindow2.Close();
                 App.ChildWindowRectangle.Visibility = Visibility.Hidden;
                 App.ChildWindow2 = null;
-                //App.SessionsTabViewModel.InitializeSessions();
                 App.SessionsTabViewModel.UpdateSessions();
                 App.SeatsTabViewModel.SelectedIndex = 0;
             });
@@ -180,14 +168,12 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
             {
                 MadeChange = true;
                 App.HasChanges = true;
-                //MovieSessionViewModel.Cinema = selectedCinema.ToString();
             });
 
             HallChangedCommand = new RelayCommand((selectedHall) =>
             {
                 MadeChange = true;
                 App.HasChanges = true;
-                //MovieSessionViewModel.Hall = selectedHall.ToString();
             });
 
             DateChangedCommand = new RelayCommand((selectedDate) =>
@@ -223,8 +209,6 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
                
                 var _session = new Session()
                 {
-                    //Cinema = MovieSessionViewModel.Cinema,
-                    //Hall = MovieSessionViewModel.Hall,
                     Date = MovieSessionViewModel.Date,
                     Time = DateTime.Parse(MovieSessionViewModel.Time).ToShortTimeString(),
                     Price = MovieSessionViewModel.Price

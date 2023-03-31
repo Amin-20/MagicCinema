@@ -131,14 +131,10 @@ namespace CinemaPlus.ViewModels.TabsViewModels
                 App.MoviesWrapPanel.Children.Add(noResultUC);
             }
             TodayUCScroll.ScrollToTop();
-            //App.MoviesWrapPanel.Children.Add(Helper.RemoveElementFromItsParent(App.WeAreBackView));
-            //App.MoviesWrapPanel.Children.Add(Helper.RemoveElementFromItsParent(App.EndingView));
         }
 
-        //Returns what - returns if there was a cell created
         private bool CreateMovieCell(Models.Movie movie)
         {
-            // to prevent repetition
             var M = App.MoviesInMoviesForEditWrapPanel.Find((m) => m.Title == movie.Title);
             if (M != null)
                 return false;
@@ -161,7 +157,7 @@ namespace CinemaPlus.ViewModels.TabsViewModels
                 for (int x = 0; x < movie.Formats.Count; x++)
                 {
                     var format = new MovieDetailUC { DataContext = movie.Formats[x].DataContext };
-                    if (x != 0) // 2d and subtitle
+                    if (x != 0) 
                     {
                         if (x == 1)
                             format.Image.Source = Helper.StringToImageSource($@"..\..\Images\2dDark.png");
@@ -169,7 +165,6 @@ namespace CinemaPlus.ViewModels.TabsViewModels
                         format.Image.Height = movie.Formats[x].Image.Height;
                         format.Image.Width = movie.Formats[x].Image.Width;
                     }
-                   // movieView.MovieDetailsStackPanel.Children.Add(format);
                 }
                 App.MoviesInMoviesForEditWrapPanel.Add(movie);
                 App.MoviesWrapPanel.Children.Add(movieView);

@@ -38,11 +38,9 @@ namespace CinemaPlus.ViewModels
                     App.PageWrapPanel.Children.RemoveAt(0);
                     App.PageWrapPanel.Children.Add(App.PreviousPages[0]);
                     App.PreviousPages.RemoveRange(1, App.PreviousPages.Count - 1);
-                    //App.MoviesWrapPanel.Children.Add(Helper.RemoveElementFromItsParent(App.EndingView));
                     var homePageView = App.PageWrapPanel.Children[0] as HomePageUC;
                     var homePageViewModel = homePageView.DataContext as HomePageUCViewModel;
                     homePageViewModel.TodayView.TodayUCScroll.ScrollToTop();
-                    //homePageViewModel.TodayViewModel.FilterMovies();
                     homePageViewModel.TodayCommand.Execute(null);
                     App.Web.Source = new Uri($"https://www.youtube.com");
                 }

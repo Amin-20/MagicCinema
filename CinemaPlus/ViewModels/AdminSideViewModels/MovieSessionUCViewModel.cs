@@ -15,22 +15,6 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
     {
         public RelayCommand EditSessionCommand { get; set; }
 
-        //private string cinema;
-
-        //public string Cinema
-        //{
-        //    get { return cinema; }
-        //    set { cinema = value; OnPropertyChanged(); }
-        //}
-
-        //private string hall;
-
-        //public string Hall
-        //{
-        //    get { return hall; }
-        //    set { hall = value; OnPropertyChanged(); }
-        //}
-
         private string date;
 
         public string Date
@@ -62,8 +46,6 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
                 var editSessionWindow = new EditSessionWindow();
                 var session = new Session()
                 {
-                     //Cinema = Cinema,
-                     //Hall = Hall,
                      Date = Date,
                      Time = DateTime.Parse(Time).ToShortTimeString(),
                      Price = Price

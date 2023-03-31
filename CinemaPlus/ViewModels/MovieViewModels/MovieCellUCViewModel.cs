@@ -59,8 +59,8 @@ namespace CinemaPlus.ViewModels.MovieViewModels
                 {
                     App.SelectedMovieForEdit = Movie;
                     var window = CreateEditMovieWindow();
-                    App.EditMovieWindowViewModel.SessionsTabCommand.Execute(null);
                     App.EditMovieWindowViewModel.SessionsTabCheckedCommand.Execute(App.SessionTabImage);
+                    App.EditMovieWindowViewModel.SessionsTabCommand.Execute(null);
                     window.SessionsRB.IsChecked = true;
                     window.ShowDialog();
                 }

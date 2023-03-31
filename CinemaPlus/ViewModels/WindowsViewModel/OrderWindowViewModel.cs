@@ -139,15 +139,6 @@ namespace CinemaPlus.ViewModels.Main
                         var movieTicketViewModel = new MovieTicketUCViewModel();
                         movieTicketView.DataContext = movieTicketViewModel;
                         movieTicketViewModel.Movie = App.SelectedMovie;
-                        //movieTicketView.CinemaTB.Text = App.SelectedCinema;
-                        //movieTicketView.HallTB.Text = App.SelectedHall;
-                        //int seat = App.SelectedSeats[x].SeatNo;
-                        //int row = App.SelectedSeats[x].RowNo;
-                        //movieTicketView.SeatNo.Text = seat.ToString();
-                        //movieTicketView.RowNo.Text = row.ToString();
-                        //movieTicketView.DateTB.Text = date.Date;
-                        //movieTicketView.TimeTB.Text = date.Time;
-                        //movieTicketView.PriceTB.Text = "₼" + App.SelectedMovie.Price;
                         movieTicketViewModel.Cinema = App.SelectedCinema;
                         movieTicketViewModel.Hall = App.SelectedHall;
                         int seat = App.SelectedSeats[x].SeatNo;
@@ -185,8 +176,6 @@ namespace CinemaPlus.ViewModels.Main
                     allPurchasedTickets.AddRange(tickets);
                     JsonSerialization<Ticket>.Serialize(allPurchasedTickets, @"~/../../../Files\purchasedTickets.json");
 
-                    //hall.HallMovies.Remove(hall.HallMovies.Find((m) => m.Title == movie.Title));
-                    //hall.HallMovies.Add(movie);
                     string filename = @"~/../../../Files/Halls\" + App.SelectedCinema.Replace(" ", string.Empty) + "+" + App.SelectedHall.Replace(" ", string.Empty) + ".json";
                     JsonSerialization<Models.Movie>.Serialize(hall.HallMovies, filename);
                     hall.HallMovies = JsonSerialization<Models.Movie>.Deserialize(filename);

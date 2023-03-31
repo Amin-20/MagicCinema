@@ -84,24 +84,19 @@ namespace CinemaPlus.ViewModels.TabsViewModels
             {
                 var sDate = (string)selectedDate;
                 DateTime dDate = DateTime.Parse((string)selectedDate);
-                //DateTime dDate = DateTime.Parse(sDate, CultureInfo.InvariantCulture);
                 if (dDate.Date == DateTime.Today.Date)
                 {
                     DateTextBlock.Text = sDate;
-                    //TodayRB.IsChecked = true;
                     TodayIsCheckedCommand.Execute(TodayRB);
                 }
                 else if (dDate.Date == DateTime.Today.AddDays(1).Date)
                 {
                     DateTextBlock.Text = sDate;
-                    //TomorrowRB.IsChecked = true;
                     TomorrowIsCheckedCommand.Execute(TomorrowRB);
                 }
                 else
                 {
                     DateTextBlock.Text = sDate;
-                    //TomorrowRB.IsChecked = false;
-                    //TodayRB.IsChecked = false;
                 }
                 FilterAllSchedules();
             });
@@ -171,10 +166,8 @@ namespace CinemaPlus.ViewModels.TabsViewModels
                 noResultUC.DataContext = noResultViewModel;
                 App.MoviesSchedulesWrapPanel.Children.Add(noResultUC);
             }
-            //ScheduleUCScroll.ScrollToTop();
         }
 
-        //Returns true if there is a movie subject to conditions
         public bool AddScheduleToSchedules(Cinema cinema)
         {
             bool hasResult = false;
@@ -215,7 +208,7 @@ namespace CinemaPlus.ViewModels.TabsViewModels
             for (int x = 0; x < movie.Formats.Count; x++)
             {
                 var format = new MovieDetailUC { DataContext = movie.Formats[x].DataContext };
-                if (x != 0) // 2d and subtitle
+                if (x != 0)
                 {
                     if (x == 1)
                         format.Image.Source = Helper.StringToImageSource($@"..\..\Images\2dDark.png");

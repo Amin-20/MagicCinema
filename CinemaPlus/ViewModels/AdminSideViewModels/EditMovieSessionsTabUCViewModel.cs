@@ -85,18 +85,12 @@ namespace CinemaPlus.ViewModels.AdminSideViewModels
                 var movieSessionView = new MovieSessionUC();
                 var movieSessionViewModel = new MovieSessionUCViewModel();
                 movieSessionView.DataContext = movieSessionViewModel;
-                //movieSessionViewModel.Cinema = session.Cinema;
-                //movieSessionViewModel.Hall = session.Hall;
                 movieSessionViewModel.Date = DateTime.Parse(session.Date).ToShortDateString().Replace("/", ".");
                 movieSessionViewModel.Time = (DateTime.Parse(session.Time).ToShortTimeString().Replace(":00 ", " ").Trim());
                 movieSessionViewModel.Price = session.Price;
                 MovieSchedulesToEditWrapPanel.Children.Add(movieSessionView);
                 if (App.AdminSideAddSide)
                 {
-                    //movieSessionView.EditButton.Visibility = Visibility.Collapsed;
-                    //movieSessionView.EditButton.IsEnabled = false;
-                    //movieSessionView.border.Visibility = Visibility.Collapsed;
-                    //movieSessionView.Margin = new Thickness(100, 0, 0, 0);
                     movieSessionView.Width += 200;
                 }
             }

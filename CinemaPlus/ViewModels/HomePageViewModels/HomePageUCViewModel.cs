@@ -11,7 +11,6 @@ namespace CinemaPlus.ViewModels.HomePageViewModels
         public RelayCommand ScheduleCommand { get; set; }
         public RelayCommand SearchCommand { get; set; }
 
-        // Tabs
         public TodayUC TodayView { get; set; }
         public TodayUCViewModel TodayViewModel { get; set; }
         public ScheduleUC ScheduleView { get; set; }
@@ -56,7 +55,6 @@ namespace CinemaPlus.ViewModels.HomePageViewModels
             ScheduleViewModel = new ScheduleUCViewModel(ScheduleView.MoviesSchedulesWrapPanel, ScheduleView.ScheduleUCScroll);
             ScheduleView.DataContext = ScheduleViewModel;
             ScheduleViewModel.TodayRB = ScheduleView.TodayRB;
-            //ScheduleViewModel.TomorrowRB = ScheduleView.TomorrowRB;
             ScheduleViewModel.DatesComboBox = ScheduleView.datesCBox;
             ScheduleViewModel.FilterAllSchedules();
 
@@ -86,7 +84,6 @@ namespace CinemaPlus.ViewModels.HomePageViewModels
                 SearchIsChecked = false;
 
                 App.HomePage.Children.RemoveAt(0);
-                //ScheduleViewModel.FilterAllSchedules();
                 App.HomePage.Children.Add(ScheduleView);
                 ScheduleView.ScheduleUCScroll.ScrollToTop();
             });

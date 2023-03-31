@@ -328,20 +328,15 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
                         var _session = SessionsTabViewModel.Sessions[x];
                         string filename = @"~/../../../Files/Halls\" + _session.Cinema.Replace(" ", string.Empty) + "+" + _session.Hall.Replace(" ", string.Empty) + ".json";
 
-                        #region Session
-                        //var movie_session = hall_movies.Find((m) => m.Title == App.SelectedMovieForEdit.Title);
-                        //DateTime date = DateTime.Parse(_session.Date);
-                        //DateTime time = DateTime.Parse(_session.Time);
-                        //DateTime dtCombined = new DateTime(date.Year, date.Month, date.Day, time.Hour, time.Minute, time.Second);
-                        //_changed_movie.Session.Date = _session.Date;
-                        //_changed_movie.Session.Time = _session.Time;
+
+
                         _changed_movie.Session = _session;
                         List<Models.Movie> hall_movies = new List<Models.Movie>();
-                        if (File.Exists(filename)) // old cinema, cinema exists
+                        if (File.Exists(filename))
                         {
                             hall_movies = JsonSerialization<Models.Movie>.Deserialize(filename);
                         }
-                        else // new cinema
+                        else
                         {
                             var _cinema = App.Cinemas.Find((c) => c.Name == _session.Cinema);
                             var hall = new Hall()
@@ -355,17 +350,11 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
 
                         hall_movies.Add(_changed_movie);
                         JsonSerialization<Models.Movie>.Serialize(hall_movies, filename);
-                        #endregion
-
-                        //var cinema = App.Cinemas.Find((c) => c.Name == _session.Cinema);
-                        //var newHall = new Hall()
-                        //{
-                        //     HallName=_session.Hall
-                        //};
-                        //cinema.Halls.Add(newHall);
 
 
-                        #region OneTime
+
+
+              
                         if (!didOneTime)
                         {
                             int i = defaultMovies.FindIndex((m) => m.Title == App.SelectedMovieForEdit.Title);
@@ -373,22 +362,14 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
                             App.DefaultMovies = defaultMovies;
                             JsonSerialization<Models.Movie>.Serialize(defaultMovies, @"~/../../../Files/Defaults\defaultMovies.json");
 
-                            //int i2 = App.Movies.FindIndex((m) => m.Title == App.SelectedMovieForEdit.Title);
-                            //App.Movies[i2] = _changed_movie;
                             didOneTime = true;
 
-                            // +    
+                              
                         }
-                        #endregion
+                
 
                     }
-                    // loop ends here . . . . . . . . . 
 
-                    //foreach (var movie in defaultMovies)
-                    //{
-                    //    movie.SetPrice();
-                    //}
-                    //JsonSerialization<Models.Movie>.Serialize(defaultMovies, @"~/../../../Files/Defaults\defaultMovies.json");
 
                     App.ChildWindow.Close();
                     App.Rectangle.Visibility = Visibility.Hidden;
@@ -399,7 +380,6 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
                     MessageBoxImage icon2 = MessageBoxImage.Warning;
                     MessageBox.Show(message2, caption2, button2, icon2);
 
-                    //App.MoviesInMoviesForEditWrapPanel.Clear();
                     ((App.PageWrapPanel.Children[0] as AdminHomePageUC).DataContext as AdminHomePageUCViewModel).EditMovieTabViewModel.FilterMovies();
                     App.IsInAdminSide = !App.IsInAdminSide;
                     Helper.InitializeCinemas();
@@ -455,8 +435,6 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
                                     string filename = @"~/../../../Files/Halls\" + cinema.Name.Replace(" ", string.Empty) + "+" + hall.HallName.Replace(" ", string.Empty) + ".json";
                                     var movies = JsonSerialization<Models.Movie>.Deserialize(filename);
                                     int count = movies.RemoveAll((_movie) => _movie.Title == App.SelectedMovieForEdit.Title);
-                                    //int index = movies.FindIndex((_movie) => _movie.Title == App.SelectedMovieForEdit.Title);
-                                    //movies.RemoveAt(index);
                                     if (count > 0)
                                         JsonSerialization<Models.Movie>.Serialize(movies, filename);
                                 }
@@ -481,11 +459,6 @@ namespace CinemaPlus.ViewModels.WindowsViewModel
             });
         }
 
-        //public void ChangeImageSource(string imagePath, Image image)
-        //{
-        //    Uri imageUri = new Uri(imagePath, UriKind.Relative);
-        //    BitmapImage imageBitmap = new BitmapImage(imageUri);
-        //    image.Source = imageBitmap;
-        //}
+
     }
 }

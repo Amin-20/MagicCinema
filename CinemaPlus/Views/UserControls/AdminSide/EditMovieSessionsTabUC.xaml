@@ -10,7 +10,7 @@
              Height="471"
              Width="974">
 
-    <Grid Background="{DynamicResource fifthColor}" x:Name="SessionsGrid" Height="571" VerticalAlignment="Top">
+    <Grid Background="{DynamicResource firstColor}" x:Name="SessionsGrid" Height="571" VerticalAlignment="Top">
         <Border 
                 Margin="0,0,0,65">
             <ScrollViewer VerticalScrollBarVisibility="Auto"
@@ -31,8 +31,8 @@
                 Canvas.Bottom="110"
                 VerticalAlignment="Top"
                 Height="50"
+                Background="Black"
                 x:Name="AddSessionButton"
-                Background="{StaticResource tenthColor}" 
                 HorizontalAlignment="Stretch"
                 Command="{Binding AddSessionCommand}">
                 <TextBlock Canvas.Left="-56" Canvas.Top="-15" HorizontalAlignment="Left" VerticalAlignment="Center">Add Session</TextBlock>
